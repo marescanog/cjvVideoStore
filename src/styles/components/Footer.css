@@ -1,0 +1,57 @@
+.page-footer{
+    color: white;
+}
+
+a {
+    color: white;
+    text-decoration: none; /* no underline */
+}
+
+.container-fluid{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer_links_container{
+    padding-top: 2em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 50%;
+    /* background-color: red; */
+    margin-left: 3em;
+}
+
+.footer-copyright{
+    padding: 0;
+    margin: 0;
+    padding: 1em 1em 0.5em 1em;
+    text-align: center;
+}
+
+.footer_li{
+    width: 180px;
+}
+
+
+/* On screens that are 992px or less, set the background color to blue */
+@media screen and (max-width: 992px) {
+    .footer_links_container{
+        width: 90%;
+        margin-left:7em;
+    }
+}
+
+/* On screens that are 600px or less, set the background color to olive */
+@media screen and (max-width: 600px) {
+    .footer_links_container{
+        flex-direction: column;
+        text-align: center;
+        width: 100%;
+        margin-left:0;
+    }
+    .footer_li{
+        width: 100%;
+    }
+}

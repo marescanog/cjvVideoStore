@@ -7,6 +7,8 @@ import MovieListing from './pages/MovieListing';
 import TVListing from './pages/TVListing';
 import Details from './pages/Details';
 import Registration from './pages/Registration';
+import About from './pages/About';
+import Contact from './pages/Contact';
 
 const App = () => {
   return (
@@ -20,6 +22,8 @@ const App = () => {
           <Route path='/details/:id' element={<Details/>} />
           <Route path='/signup' element={<Login/>} />
           <Route path='/login' element={<Registration/>} />
+          <Route path='/about' element={<About/>} />
+          <Route path='/contact' element={<Contact/>} />
           <Route path='*' element={<NoPage/>} />
         </Routes>
       </BrowserRouter>
