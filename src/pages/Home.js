@@ -24,7 +24,7 @@ const Home = () => {
       <div>
         <NavigationBar/>
         <div className='homeContainer'>
-          <Header title={'Welcome!'}/>
+          <Header title={'Start Your Ultimate Binge Journey Today!'}/>
           <Hero list={heroData}/>
           <Featured  title={'Movies'}/>
           <Featured  title={'TV Shows'}/>

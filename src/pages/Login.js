@@ -9,7 +9,7 @@ const Login = () => {
     <div className="mainContainer">
         <div>
           <NavigationBar/>
-          <Header title={'Login'}/>
+          <Header title={'Login'} center/>
         </div>
         <Footer/>  
     </div>

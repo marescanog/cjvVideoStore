@@ -9,7 +9,7 @@ const Registration = () => {
     <div className="mainContainer">
         <div>
           <NavigationBar/>
-          <Header title={'Registration'}/>
+          <Header title={'Registration'} center/>
         </div>
         <Footer/>  
     </div>

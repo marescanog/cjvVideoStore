@@ -1,0 +1,26 @@
+.universal_container{
+    margin-left: 3em;
+    margin-right: 3em;
+}
+
+.header_text_style{
+    color: white;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    font-family: "Nunito", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+}
+
+/* On screens that are 992px or less, set the background color to blue */
+@media screen and (max-width: 992px) {
+
+}
+
+/* On screens that are 600px or less, set the background color to olive */
+@media screen and (max-width: 600px) {
+    .header_text_style{
+        text-align: center;
+    }
+}
