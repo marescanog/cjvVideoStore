@@ -1,6 +1,48 @@
 {
     "movies":[
-        {"name":""}
+        {
+            "title": "Explore the Universe",
+            "description": "Join an awe-inspiring journey across the cosmos as 'Explore the Universe' takes you on an unprecedented voyage to the most spectacular galaxies, nebulas, and black holes known to science. Narrated by renowned astrophysicist Dr. Ava Rivera, this documentary combines cutting-edge CGI with breathtaking footage from the world's leading space observatories. 'Explore the Universe' is not just a film; it's an immersive experience that brings the wonders of the cosmos to your screen.",
+            "rating": 4.8,
+            "genre": ["documentary", "science", "adventure"],
+            "rentPrice": 5.00,
+            "buyPrice": 20.00,
+            "posterImage": "/posters/movie/galacticQuest.webp",
+            "backgroundImage": "/posters/movie/galacticQuest.webp",
+            "MPARating": "G",
+            "Length": 120,
+            "releaseDate": "2024/02/20",
+            "TrailerUrl": "/posters/movie/galacticQuest.webp"
+        },
+        {
+            "title": "Another Love Story",
+            "description": "Set against the vibrant backdrop of New York City, 'Another Love Story' unfolds the serendipitous romance between Emma, an aspiring playwright, and Jack, a disillusioned musician. As they navigate the complexities of love, ambition, and personal growth, their unexpected connection leads them on a heartwarming journey of self-discovery and the true meaning of companionship. Featuring stunning performances and a captivating soundtrack, 'Another Love Story' is a testament to love's power to inspire change and bring people together.",
+            "rating": 4.5,
+            "genre": ["romance", "drama"],
+            "rentPrice": 4.00,
+            "buyPrice": 16.00,
+            "posterImage": "/posters/movie/galacticQuest.webp",
+            "backgroundImage": "/posters/movie/galacticQuest.webp",
+            "MPARating": "PG-13",
+            "Length": 105,
+            "releaseDate": "2023/11/14",
+            "TrailerUrl": "/posters/movie/galacticQuest.webp"
+        },
+        {
+            "title": "Galactic Quest",
+            "description": "Embark on an epic space odyssey with 'Galactic Quest,' a thrilling adventure that spans the universe. Follow the crew of the Star Voyager as they encounter alien civilizations, navigate through cosmic anomalies, and battle a malevolent force threatening the fabric of space-time itself. With stunning visuals, a gripping storyline, and a dynamic cast, 'Galactic Quest' delivers an unforgettable journey through the stars, exploring themes of bravery, friendship, and the endless possibilities of the unknown.",
+            "rating": 4.7,
+            "genre": ["sci-fi", "adventure", "action"],
+            "rentPrice": 6.00,
+            "buyPrice": 22.00,
+            "posterImage": "/posters/movie/galacticQuest.webp",
+            "backgroundImage": "/posters/movie/galacticQuest.webp",
+            "MPARating": "PG",
+            "Length": 132,
+            "releaseDate": "2024/05/07",
+            "TrailerUrl": "/posters/movie/galacticQuest.webp"
+        }
+        
     ],
     "shows":[
 

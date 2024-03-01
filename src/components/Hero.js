@@ -1,12 +1,25 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 import Container from 'react-bootstrap/Container';
 import Carousel from 'react-bootstrap/Carousel';
 
 const Hero = () => {
+  const [myData, setData] = useState([]);
+
+  useEffect(() => {
+    fetch('http://localhost:8000/movies')
+      .then((res) => {
+        return res.json();
+      })
+      .then((data) => {
+        console.log(data);
+        setData(data);
+      });
+  }, []);
+
   return (
-    <Container fluid>
+      <Carousel data-bs-theme="dark" style={{color: 'blue', fontSize: 30, width:'100%'}}>
       <Carousel.Item>
-        {/* <ExampleCarouselImage text="First slide" /> */}
+        {/* <img src="/img\posters\movie\exploreTheUniverse.webp" alt="asdadsa"/> */}
         <Carousel.Caption>
           <h3>First slide label</h3>
           <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
@@ -28,7 +41,8 @@ const Hero = () => {
           </p>
         </Carousel.Caption>
       </Carousel.Item>
-    </Container> 
+      </Carousel>
+
   )
 }
 

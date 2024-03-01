@@ -4,16 +4,21 @@ import Footer from '../components/Footer';
 import Header from '../components/Header';
 import Hero from '../components/Hero';
 import Featured from '../components/Featured';
+import '../styles/Home.css';
 
 const Home = () => {
   return (
-    <div>
-      <NavigationBar/>
-        <Header title={'Welcome!'}/>
-        <Hero />
-        <Featured  title={'Movies'}/>
-        <Featured  title={'TV Shows'}/>
-        <p>Content</p>
+    <div className="mainContainer">
+      <div>
+        <NavigationBar/>
+        <div className='container'>
+          <Header title={'Welcome!'}/>
+          <Hero />
+          <Featured  title={'Movies'}/>
+          <Featured  title={'TV Shows'}/>
+          <p>Content</p>
+        </div>
+      </div>
       <Footer/>  
     </div>
   )
