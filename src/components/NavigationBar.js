@@ -1,24 +1,28 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom';
 import Container from 'react-bootstrap/Container';
-import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
-import '../styles/Navigation.css';
+import Navbar from 'react-bootstrap/Navbar';
+import '../styles/components/Navigation.css';
 
 const NavigationBar = () => {
   return (
-    <Navbar bg="primary" data-bs-theme="dark">
-      <Container fluid>
-        <Navbar.Brand href="/home">LOGO</Navbar.Brand>
+    <Navbar expand="lg" data-bs-theme="dark" className="navigation_container">
+      <Container fluid >
+        <Navbar.Brand as={NavLink} to="/home" className="nav-brand">
+          <img src="/img/bingeFlix.png" className="nav-icon-image" alt="" />
+          <p className="nav-brand-text">BINGEFLIX</p>
+        </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse className="justify-content-end">
+        <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="/home">Home</Nav.Link>
-            <Nav.Link href="/movies">Movies</Nav.Link>
-            <Nav.Link href="/tv">TV</Nav.Link>
+            <Nav.Link as={NavLink} to="/home" activeClassName="selected">Home</Nav.Link>
+            <Nav.Link as={NavLink} to="/movies">Movies</Nav.Link>
+            <Nav.Link as={NavLink} to="/tv">TV</Nav.Link>
           </Nav>
-          <Nav>
-            <Nav.Link href="/signup">Signup</Nav.Link>
-            <Nav.Link href="/login">Login</Nav.Link>
+          <Nav className="justify-content-end">
+            <Nav.Link as={NavLink} to="/signup">Signup</Nav.Link>
+            <Nav.Link as={NavLink} to="/login">Login</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>

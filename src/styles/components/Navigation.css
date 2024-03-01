@@ -1,0 +1,65 @@
+
+.navbar{
+    background: rgb(0,116,185);
+    background: linear-gradient(90deg, rgba(0,116,185,1) -1%, rgba(4,35,55,1) 100%);
+    padding-left: 3em;
+    padding-right: 3em;
+}
+
+.nav-link{
+    font-family: 'Roboto', sans-serif;
+    color: #FFFFFF !important;
+}
+
+.nav-link.active{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    color: white !important;
+}
+
+.nav-icon-image {
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
+}
+
+.nav-brand{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-brand-text{
+    height: 100%;
+    margin-top: auto;
+    margin-bottom: auto;
+    font-size: 1.3em;
+    font-weight: 600;
+    font-family: "Madimi One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* On screens that are 992px or less, set the background color to blue */
+@media screen and (max-width: 992px) {
+
+}
+
+/* On screens that are 600px or less, set the background color to olive */
+@media screen and (max-width: 600px) {
+    .navbar{
+        padding-left: 0.5em;
+        padding-right: 0.5em;
+    }
+
+    .nav-icon-image {
+        width: 35px;
+        height: 35px;
+        margin-right: -10px;
+    }
+
+    .nav-brand-text{
+        margin-left: 1em;
+    }
+}
