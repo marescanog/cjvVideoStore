@@ -17,14 +17,14 @@
 /* On screens that are 992px or less, set the background color to blue */
 @media screen and (max-width: 992px) {
     .mainContainer {
-        background-color: blue;
+        /* background-color: blue; */
     }
 }
 
 /* On screens that are 600px or less, set the background color to olive */
 @media screen and (max-width: 600px) {
     .mainContainer {
-        background-color: olive;
+        /* background-color: olive; */
     }
 
 }

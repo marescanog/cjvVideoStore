@@ -1,19 +1,165 @@
-body {
-    background-color: red;
+.hero_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
+.bg-effect{
+    background: linear-gradient(to top, white, transparent 90%);
+}
 
-/* On screens that are 992px or less, set the background color to blue */
+.carousel_style {
+    width: 100%;
+    display: flex;
+    background-image: linear-gradient(to left, rgba(255,0,0,0),red);
+}
+
+.carousel_image_container{
+    height: 700px;
+    background-image: linear-gradient(to right, rgba(255,0,0,0), rgba(0,116,185,1));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden
+}
+
+.carousel_image{
+    flex-shrink: 0;
+    min-width: 100%;
+    min-height: 100%;
+    opacity: 0.4
+}
+
+.carousel_caption_outer_container{
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+
+.carousel_caption_container{
+    width: 50%;
+    color: white;
+    margin-bottom: 3em;
+}
+
+.description_text_style{
+    font-size: 1.3em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+            line-clamp: 2; 
+    -webkit-box-orient: vertical;
+}
+
+.button_hero{
+    margin-top: 0.25em;
+    padding: 10px;
+    width: 250px;
+    font-size: 1.5em;
+    font-family: "Nunito", sans-serif;
+}
+
+.carousel-control-next-icon{
+    padding: 2em;
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important;
+}
+
+.carousel-control-prev-icon{
+    padding: 2em;
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E") !important;
+}
+
+.carousel-indicators [data-bs-target] {
+    width: 20px !important;
+    height: 20px !important;
+    border: 1px solid transparent !important;
+    border-radius: 10px;
+    background-color: #ffffff !important;
+}
+
+.carousel-indicators .active {
+    background-color: #ffffff !important;
+}
+
+/* On screens that are 992px or less set the background color to blue */
 @media screen and (max-width: 992px) {
-    body {
-        background-color: blue;
+    .carousel_image_container{
+        height: 500px;
+    }
+
+    .carousel_caption_container{
+        width: 80%;
+    }
+
+    .title_text_style{
+        font-size: 2.5em;
+    }
+
+    .button_hero{
+        margin-top: 1em;
+        padding: 10px;
+        width: 250px;
+    }
+
+    .description_text_style{
+        font-size: 1.5em;
+    }
+
+    .carousel-indicators [data-bs-target] {
+        width: 25px !important;
+        height: 20px !important;
     }
 }
 
 /* On screens that are 600px or less, set the background color to olive */
 @media screen and (max-width: 600px) {
-    body {
-        background-color: olive;
+
+    .carousel-indicators [data-bs-target] {
+        width: 15px !important;
+        height: 15px !important;
     }
 
+    .carousel_image_container{
+        height: 300px;
+    }
+
+    .carousel_caption_container{
+        width: 100%;
+        margin-bottom: 0.5em;
+        padding-bottom: 10px;
+    }
+
+    .hide_small {
+        display: none;
+    }
+
+    .button_hero{
+        padding: 0;
+        margin-top: 0.5em;
+        margin-bottom: 0.5em;
+        height: 2.25em;
+        width: 100%;
+        font-size: 0.9em;
+        font-weight: bolder;
+    }
+
+    .title_text_style {
+        font-size: 1.5em;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+                line-clamp: 2; 
+        -webkit-box-orient: vertical;
+    }
+
+    .carousel-control-next-icon{
+        padding: 1em;
+    }
+    
+    .carousel-control-prev-icon{
+        padding: 1em;
+    }
 }
