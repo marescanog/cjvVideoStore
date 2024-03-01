@@ -26,8 +26,10 @@ const Home = () => {
         <div className='homeContainer'>
           <Header title={'Start Your Ultimate Binge Journey Today!'} />
           <Hero list={heroData}/>
-          <Featured  title={'Movies'}/>
-          <Featured  title={'TV Shows'}/>
+          <Featured  title={'Featured Films'} featuredList={heroData} />
+          <div className="home_space_featured">
+            <Featured  title={'Featured TV Shows'} featuredList={heroData} />
+          </div>
           <p>Content</p>
         </div>
       </div>

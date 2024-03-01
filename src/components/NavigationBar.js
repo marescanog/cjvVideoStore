@@ -7,7 +7,7 @@ import '../styles/components/Navigation.css';
 
 const NavigationBar = () => {
   return (
-    <Navbar expand="lg" data-bs-theme="dark" className="navigation_container">
+    <Navbar expand="lg" data-bs-theme="dark" className="navigation_container" sticky="top">
       <Container fluid >
         <Navbar.Brand as={NavLink} to="/home" className="nav-brand">
           <img src="/img/bingeFlix.png" className="nav-icon-image" alt="" />
