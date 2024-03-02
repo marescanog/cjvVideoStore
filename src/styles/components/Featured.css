@@ -169,7 +169,6 @@
     .featured_container {
         height: 28em;
         transition: 0.4s;
-        background-color: red;
     }
 
     .featured_card_style{
@@ -187,7 +186,6 @@
     .featured_container {
         height: 28em;
         transition: 0.4s;
-        background-color: aqua;
     }
 
     .featured_card_style{

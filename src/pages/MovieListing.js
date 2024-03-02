@@ -185,7 +185,7 @@ const MovieListing = ({watchType}) => {
                 ))}
               </ButtonGroup>
             </div>
-            <Listing list={movieData}/>
+            <Listing list={movieData} title={"movieListingPage"}/>
         </div>
         <Footer/>  
     </div>

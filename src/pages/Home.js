@@ -27,7 +27,7 @@ const Home = () => {
         <div className='homeContainer'>
           <Header title={'Start Your Ultimate Binge Journey Today!'} />
           <Hero list={heroData}/>
-          <Featured  title={'Featured Films'} featuredList={heroData} />
+          <Featured title={'Featured Films'} featuredList={heroData} />
           <div className="home_space_featured">
             <Featured  title={'Featured TV Shows'} featuredList={heroData} />
           </div>
