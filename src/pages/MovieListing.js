@@ -204,7 +204,8 @@ const MovieListing = ({watchType}) => {
                 ))}
               </ButtonGroup>
             </div>
-            <Listing list={movieData} title={"movieListingPage"}/>
+
+            <Listing list={movieData} title={"movies"}/>
         </div>
         <Footer/>  
     </div>

@@ -6,12 +6,21 @@ import '../styles/components/Listing.css';
 
 const Listing = ({list, title}) => {
   return (
-    <div className='listingContainer'>
-      {list.map((el, indx)=>{
-        return <ItemTile key={'listingContainer'+el.title+indx} title={title} el={el} indx={indx} append={"_2"}/>
-      })}
+    <div className={list && Array.isArray(list) && list.length > 0 ? 'listingContainer' : 'listingContainerEmpty'}>
+      {
+        list && Array.isArray(list) && list.length > 0 ?
+        (
+          list.map((el, indx)=>{
+            return <ItemTile key={'listingContainer'+el.title+indx} title={title} el={el} indx={indx} append={"_2"}/>
+          })
+        )
+        :
+        <div className='listingContainerEmpty'>
+          <p>No {title} results for filter</p>
+        </div>
+      }
     </div>
   )
 }
 
-export default Listing
+export default Listing;

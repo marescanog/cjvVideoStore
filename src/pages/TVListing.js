@@ -72,7 +72,7 @@ const TVListing = ({watchType}) => {
                 ))}
               </ButtonGroup>
             </div>
-            <Listing/>
+            <Listing title={'TV series'}/>
         </div>
         <Footer/>  
     </div>
