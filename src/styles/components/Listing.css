@@ -123,11 +123,10 @@
         font-size: 1em;
     }
 
-
-
     .listingContainer{
         display: grid;
         grid-template-columns: auto auto auto auto auto auto auto;
+        margin-top: 1.5em;
     }
 
     .featured_card_style_2{
@@ -170,7 +169,7 @@
         grid-template-columns: auto auto;
         justify-content: center;
         align-items: center;
-        margin-top: 2.15em;
+        margin-top: 2em;
     }
 
     .featured_card_style_2{

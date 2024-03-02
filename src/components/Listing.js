@@ -8,7 +8,7 @@ const Listing = ({list, title}) => {
   return (
     <div className='listingContainer'>
       {list.map((el, indx)=>{
-        return <ItemTile title={title} el={el} indx={indx} append={"_2"}/>
+        return <ItemTile key={'listingContainer'+el.title+indx} title={title} el={el} indx={indx} append={"_2"}/>
       })}
     </div>
   )

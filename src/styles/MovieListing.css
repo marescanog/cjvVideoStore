@@ -38,6 +38,44 @@
     width: 9em;
 }
 
+.button_clear_filter_container_noshow{
+    opacity: 0;
+    margin-left: 1em;
+    display: inline-block;
+    margin-top: 4px;
+    cursor: pointer;
+}
+
+.button_clear_filter_container_noshow:hover{
+    cursor: pointer;
+}
+
+.button_clear_filter_container{
+    margin-left: 1em;
+    display: inline-block;
+    margin-top: 4px;
+}
+
+.button_clear_filter {
+    border-radius: 100px;
+    height: 1.5em;
+    width: 1.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.25em;
+}
+
+.button_clear_txtStyle {
+padding-top: 10px;
+}
+
+.listing_filter_container_inner{
+    display: flex;
+    flex-direction: row;
+}
+
+
 /* On screens that are 992px or less, set the background color to blue */
 @media screen and (max-width: 992px) {
 
@@ -60,5 +98,6 @@
         margin: 0;
         padding: 0;
     }
+
 
 }
