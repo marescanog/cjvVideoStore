@@ -11,8 +11,8 @@ const Hero = ({list}) => {
         {
           list && Array.isArray(list) && list.length > 0 ?
             <Carousel data-bs-theme="dark" className="carousel_style">
-              {list.map((el)=>{
-                return <Carousel.Item key={el.id}>
+              {list.map((el, indx)=>{
+                return <Carousel.Item key={el.id+'_carousel'+indx}>
                 <div className="carousel_image_container">
                   <Image src={el.backgroundImage} fluid className='carousel_image'/>
                 </div>

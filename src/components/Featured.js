@@ -9,9 +9,9 @@ const Featured = ({title, featuredList}) => {
       <div className="featured_container">
         <h2>{title}</h2>
         {featuredList && Array.isArray(featuredList) && featuredList.length > 0 ?
-          <div class="featured_card_container">
-            {featuredList.map((el)=>{
-              return <Card key={"crd"+el.id} className='featured_card_style' as={Link} to={'/details/'+el.id}>
+          <div className="featured_card_container">
+            {featuredList.map((el, indx)=>{
+              return <Card key={"crd"+el.id+title+indx} className='featured_card_style' as={Link} to={'/details/'+el.id}>
                 <div className={"featured_overlay"}>
                   <h3>{el.title}</h3>
                   <p>{el.description}</p>
