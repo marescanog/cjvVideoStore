@@ -3,6 +3,7 @@ import NavigationBar from '../components/NavigationBar';
 import Footer from '../components/Footer';
 import Header from '../components/Header';
 import Hero from '../components/Hero';
+import Content from '../components/Content';
 import Featured from '../components/Featured';
 import '../styles/Home.css';
 
@@ -30,7 +31,10 @@ const Home = () => {
           <div className="home_space_featured">
             <Featured  title={'Featured TV Shows'} featuredList={heroData} />
           </div>
-          <p>Content</p>
+          <div className="home_space_featured">
+            <Content /> 
+          </div>
+
         </div>
       </div>
       <Footer/>  

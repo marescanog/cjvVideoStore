@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import Home from './pages/Home';
 import Login from './pages/Login';
@@ -11,14 +11,17 @@ import About from './pages/About';
 import Contact from './pages/Contact';
 
 const App = () => {
+
+  const [refresh, setRefresh] = useState(false);
+
   return (
     <div>
       <BrowserRouter>
         <Routes>
           <Route index element={<Home />} />
           <Route path='/home' element={<Home />} />
-          <Route path='/movies' element={<MovieListing/>} />
-          <Route path='/tv' element={<TVListing/>} />
+          <Route path='/movies/:pathParam1?' element={<MovieListing />} />
+          <Route path='/tv/:pathParam1?' element={<TVListing watchType={'TV Shows'}/>} />
           <Route path='/details/:id' element={<Details/>} />
           <Route path='/login' element={<Login/>} />
           <Route path='/signup' element={<Registration/>} />

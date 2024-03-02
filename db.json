@@ -12,9 +12,10 @@
             "backgroundImage": "https://images.immediate.co.uk/production/volatile/sites/3/2021/11/ETERNALS-CAST-4dce3e2-e1641928422104.jpeg?resize=768,574",
             "MPARating": "PG-13",
             "Length": 156,
-            "releaseDate": "2021",
+            "releaseDate": "2021-09-05",
             "TrailerUrl": "https://www.youtube.com/watch?v=0WVDKZJkGlY",
-            "IsFeatured": true
+            "IsFeatured": true,
+            "addedOn": "2021-10-05"
         },
         {
             "id":2,
@@ -28,10 +29,11 @@
             "backgroundImage": "https://m.media-amazon.com/images/M/MV5BMDU3NmNkOTctNWY0My00ZjFlLThmYTItZmM3ZGMyYzdiZTcxXkEyXkFqcGdeQVRoaXJkUGFydHlJbmdlc3Rpb25Xb3JrZmxvdw@@._V1_QL75_UX500_CR0,0,500,281_.jpg",
             "MPARating": "PG",
             "Length": 102,
-            "releaseDate": "2021",
+            "releaseDate": "2021-11-24",
             "TrailerUrl": "https://www.youtube.com/watch?v=CaimKeDcudo",
             "IsFeatured": false,
-            "promoType" : "Free with Ads"
+            "promoType" : "Free with Ads",
+            "addedOn": "2021-12-21"
         },
         {
             "id":3,
@@ -45,9 +47,10 @@
             "backgroundImage": "https://www.beaconjournal.com/gcdn/presto/2021/06/28/PMJS/ee361cce-f538-4c38-8cd7-36298b5c5b4f-The_Boss_Baby_Family_Business.jpg",
             "MPARating": "PG",
             "Length": 107,
-            "releaseDate": "2021",
+            "releaseDate": "2021-07-02",
             "TrailerUrl": "https://www.youtube.com/watch?v=QKyXqkf8mmc",
-            "IsFeatured": false
+            "IsFeatured": false,
+            "addedOn": "2021-08-02"
         },
         {
             "id":4,
@@ -63,7 +66,8 @@
             "Length": 132,
             "releaseDate": "2021-09-03",
             "TrailerUrl": "https://www.youtube.com/watch?v=8YjFbMbfXaQ",
-            "IsFeatured": false
+            "IsFeatured": false,
+            "addedOn": "2022-01-03"
         },
         {
             "id":5,
@@ -80,12 +84,13 @@
             "releaseDate": "2021-05-28",
             "TrailerUrl": "https://www.youtube.com/watch?v=gmRKv7n2If8",
             "IsFeatured": false,
-            "promoType" : "Early Access"
+            "promoType" : "Early Access",
+            "addedOn": "2021-06-28"
         }
         
         
-        ,{
-            "id":6,
+        ,        {
+            "id":1,
             "title": "Eternals",
             "description": "The saga of the Eternals, a race of immortal beings who lived on Earth and shaped its history and civilizations.",
             "rating": 6.3,
@@ -96,13 +101,13 @@
             "backgroundImage": "https://images.immediate.co.uk/production/volatile/sites/3/2021/11/ETERNALS-CAST-4dce3e2-e1641928422104.jpeg?resize=768,574",
             "MPARating": "PG-13",
             "Length": 156,
-            "releaseDate": "2021",
+            "releaseDate": "2021-09-05",
             "TrailerUrl": "https://www.youtube.com/watch?v=0WVDKZJkGlY",
             "IsFeatured": true,
-            "promoType" : "Early Access"
+            "addedOn": "2021-10-05"
         },
         {
-            "id":7,
+            "id":2,
             "title": "Encanto",
             "description": "A Colombian teenage girl has to face the frustration of being the only member of her family without magical powers.",
             "rating": 7.2,
@@ -113,12 +118,14 @@
             "backgroundImage": "https://m.media-amazon.com/images/M/MV5BMDU3NmNkOTctNWY0My00ZjFlLThmYTItZmM3ZGMyYzdiZTcxXkEyXkFqcGdeQVRoaXJkUGFydHlJbmdlc3Rpb25Xb3JrZmxvdw@@._V1_QL75_UX500_CR0,0,500,281_.jpg",
             "MPARating": "PG",
             "Length": 102,
-            "releaseDate": "2021",
+            "releaseDate": "2021-11-24",
             "TrailerUrl": "https://www.youtube.com/watch?v=CaimKeDcudo",
-            "IsFeatured": false
+            "IsFeatured": false,
+            "promoType" : "Free with Ads",
+            "addedOn": "2021-12-21"
         },
         {
-            "id":8,
+            "id":3,
             "title": "The Boss Baby: Family Business",
             "description": "The Templeton brothers have become adults and drifted away from each other, but a new boss baby with a cutting-edge approach is about to bring them together again - and inspire a new family business.",
             "rating": 5.9,
@@ -129,12 +136,13 @@
             "backgroundImage": "https://www.beaconjournal.com/gcdn/presto/2021/06/28/PMJS/ee361cce-f538-4c38-8cd7-36298b5c5b4f-The_Boss_Baby_Family_Business.jpg",
             "MPARating": "PG",
             "Length": 107,
-            "releaseDate": "2021",
+            "releaseDate": "2021-07-02",
             "TrailerUrl": "https://www.youtube.com/watch?v=QKyXqkf8mmc",
-            "IsFeatured": false
+            "IsFeatured": false,
+            "addedOn": "2021-08-02"
         },
         {
-            "id":9,
+            "id":4,
             "title": "Shang-Chi and the Legend of the Ten Rings",
             "description": "Shang-Chi, the master of weaponry-based Kung Fu, is forced to confront his past after being drawn into the Ten Rings organization.",
             "rating": 7.4,
@@ -147,10 +155,11 @@
             "Length": 132,
             "releaseDate": "2021-09-03",
             "TrailerUrl": "https://www.youtube.com/watch?v=8YjFbMbfXaQ",
-            "IsFeatured": false
+            "IsFeatured": false,
+            "addedOn": "2022-01-03"
         },
         {
-            "id":10,
+            "id":5,
             "title": "Cruella",
             "description": "A live-action prequel feature film following a young Cruella de Vil.",
             "rating": 7.3,
@@ -164,10 +173,11 @@
             "releaseDate": "2021-05-28",
             "TrailerUrl": "https://www.youtube.com/watch?v=gmRKv7n2If8",
             "IsFeatured": false,
-            "promoType" : "Home Theatre"
+            "promoType" : "Early Access",
+            "addedOn": "2021-06-28"
         },
         {
-            "id":11,
+            "id":1,
             "title": "Eternals",
             "description": "The saga of the Eternals, a race of immortal beings who lived on Earth and shaped its history and civilizations.",
             "rating": 6.3,
@@ -178,12 +188,13 @@
             "backgroundImage": "https://images.immediate.co.uk/production/volatile/sites/3/2021/11/ETERNALS-CAST-4dce3e2-e1641928422104.jpeg?resize=768,574",
             "MPARating": "PG-13",
             "Length": 156,
-            "releaseDate": "2021",
+            "releaseDate": "2021-09-05",
             "TrailerUrl": "https://www.youtube.com/watch?v=0WVDKZJkGlY",
-            "IsFeatured": true
+            "IsFeatured": true,
+            "addedOn": "2021-10-05"
         },
         {
-            "id":12,
+            "id":2,
             "title": "Encanto",
             "description": "A Colombian teenage girl has to face the frustration of being the only member of her family without magical powers.",
             "rating": 7.2,
@@ -194,12 +205,14 @@
             "backgroundImage": "https://m.media-amazon.com/images/M/MV5BMDU3NmNkOTctNWY0My00ZjFlLThmYTItZmM3ZGMyYzdiZTcxXkEyXkFqcGdeQVRoaXJkUGFydHlJbmdlc3Rpb25Xb3JrZmxvdw@@._V1_QL75_UX500_CR0,0,500,281_.jpg",
             "MPARating": "PG",
             "Length": 102,
-            "releaseDate": "2021",
+            "releaseDate": "2021-11-24",
             "TrailerUrl": "https://www.youtube.com/watch?v=CaimKeDcudo",
-            "IsFeatured": false
+            "IsFeatured": false,
+            "promoType" : "Free with Ads",
+            "addedOn": "2021-12-21"
         },
         {
-            "id":13,
+            "id":3,
             "title": "The Boss Baby: Family Business",
             "description": "The Templeton brothers have become adults and drifted away from each other, but a new boss baby with a cutting-edge approach is about to bring them together again - and inspire a new family business.",
             "rating": 5.9,
@@ -210,12 +223,13 @@
             "backgroundImage": "https://www.beaconjournal.com/gcdn/presto/2021/06/28/PMJS/ee361cce-f538-4c38-8cd7-36298b5c5b4f-The_Boss_Baby_Family_Business.jpg",
             "MPARating": "PG",
             "Length": 107,
-            "releaseDate": "2021",
+            "releaseDate": "2021-07-02",
             "TrailerUrl": "https://www.youtube.com/watch?v=QKyXqkf8mmc",
-            "IsFeatured": false
+            "IsFeatured": false,
+            "addedOn": "2021-08-02"
         },
         {
-            "id":14,
+            "id":4,
             "title": "Shang-Chi and the Legend of the Ten Rings",
             "description": "Shang-Chi, the master of weaponry-based Kung Fu, is forced to confront his past after being drawn into the Ten Rings organization.",
             "rating": 7.4,
@@ -228,10 +242,11 @@
             "Length": 132,
             "releaseDate": "2021-09-03",
             "TrailerUrl": "https://www.youtube.com/watch?v=8YjFbMbfXaQ",
-            "IsFeatured": false
+            "IsFeatured": false,
+            "addedOn": "2022-01-03"
         },
         {
-            "id":15,
+            "id":5,
             "title": "Cruella",
             "description": "A live-action prequel feature film following a young Cruella de Vil.",
             "rating": 7.3,
@@ -244,7 +259,96 @@
             "Length": 134,
             "releaseDate": "2021-05-28",
             "TrailerUrl": "https://www.youtube.com/watch?v=gmRKv7n2If8",
-            "IsFeatured": false
+            "IsFeatured": false,
+            "promoType" : "Early Access",
+            "addedOn": "2021-06-28"
+        },
+        {
+            "id":1,
+            "title": "Eternals",
+            "description": "The saga of the Eternals, a race of immortal beings who lived on Earth and shaped its history and civilizations.",
+            "rating": 6.3,
+            "genre": ["Action", "Adventure", "Fantasy"],
+            "rentPrice": 10.99,
+            "buyPrice": 14.99,
+            "posterImage": "https://upload.wikimedia.org/wikipedia/en/9/9b/Eternals_%28film%29_poster.jpeg",
+            "backgroundImage": "https://images.immediate.co.uk/production/volatile/sites/3/2021/11/ETERNALS-CAST-4dce3e2-e1641928422104.jpeg?resize=768,574",
+            "MPARating": "PG-13",
+            "Length": 156,
+            "releaseDate": "2021-09-05",
+            "TrailerUrl": "https://www.youtube.com/watch?v=0WVDKZJkGlY",
+            "IsFeatured": true,
+            "addedOn": "2021-10-05"
+        },
+        {
+            "id":2,
+            "title": "Encanto",
+            "description": "A Colombian teenage girl has to face the frustration of being the only member of her family without magical powers.",
+            "rating": 7.2,
+            "genre": ["Animation", "Comedy", "Family"],
+            "rentPrice": 13.99,
+            "buyPrice": 19.99,
+            "posterImage": "https://upload.wikimedia.org/wikipedia/en/8/83/Encanto_poster.jpg",
+            "backgroundImage": "https://m.media-amazon.com/images/M/MV5BMDU3NmNkOTctNWY0My00ZjFlLThmYTItZmM3ZGMyYzdiZTcxXkEyXkFqcGdeQVRoaXJkUGFydHlJbmdlc3Rpb25Xb3JrZmxvdw@@._V1_QL75_UX500_CR0,0,500,281_.jpg",
+            "MPARating": "PG",
+            "Length": 102,
+            "releaseDate": "2021-11-24",
+            "TrailerUrl": "https://www.youtube.com/watch?v=CaimKeDcudo",
+            "IsFeatured": false,
+            "promoType" : "Free with Ads",
+            "addedOn": "2021-12-21"
+        },
+        {
+            "id":3,
+            "title": "The Boss Baby: Family Business",
+            "description": "The Templeton brothers have become adults and drifted away from each other, but a new boss baby with a cutting-edge approach is about to bring them together again - and inspire a new family business.",
+            "rating": 5.9,
+            "genre": ["Animation", "Adventure", "Comedy"],
+            "rentPrice": 13.99,
+            "buyPrice": 19.99,
+            "posterImage": "https://upload.wikimedia.org/wikipedia/en/3/3b/The_poster_for_The_Boss_Baby%2C_Family_Business%2C_with_new_date.jpg",
+            "backgroundImage": "https://www.beaconjournal.com/gcdn/presto/2021/06/28/PMJS/ee361cce-f538-4c38-8cd7-36298b5c5b4f-The_Boss_Baby_Family_Business.jpg",
+            "MPARating": "PG",
+            "Length": 107,
+            "releaseDate": "2021-07-02",
+            "TrailerUrl": "https://www.youtube.com/watch?v=QKyXqkf8mmc",
+            "IsFeatured": false,
+            "addedOn": "2021-08-02"
+        },
+        {
+            "id":4,
+            "title": "Shang-Chi and the Legend of the Ten Rings",
+            "description": "Shang-Chi, the master of weaponry-based Kung Fu, is forced to confront his past after being drawn into the Ten Rings organization.",
+            "rating": 7.4,
+            "genre": ["Action", "Adventure", "Fantasy"],
+            "rentPrice": 14.99,
+            "buyPrice": 19.99,
+            "posterImage": "https://upload.wikimedia.org/wikipedia/en/7/74/Shang-Chi_and_the_Legend_of_the_Ten_Rings_poster.jpeg",
+            "backgroundImage": "https://www.bollywoodhungama.com/wp-content/uploads/2021/09/Shang-Chi-and-the-Legend-of-the-Ten-Rings-English-1.jpg",
+            "MPARating": "PG-13",
+            "Length": 132,
+            "releaseDate": "2021-09-03",
+            "TrailerUrl": "https://www.youtube.com/watch?v=8YjFbMbfXaQ",
+            "IsFeatured": false,
+            "addedOn": "2022-01-03"
+        },
+        {
+            "id":5,
+            "title": "Cruella",
+            "description": "A live-action prequel feature film following a young Cruella de Vil.",
+            "rating": 7.3,
+            "genre": ["Adventure", "Comedy", "Crime"],
+            "rentPrice": 8.99,
+            "buyPrice": 14.99,
+            "posterImage": "https://upload.wikimedia.org/wikipedia/en/f/f6/Cruella_2021_film_poster.jpg",
+            "backgroundImage": "https://m.media-amazon.com/images/M/MV5BODIwYTViMGYtOWE4ZS00MWRhLTk2NWEtNWNmOWMzYTM3NGY0XkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_.jpg",
+            "MPARating": "PG-13",
+            "Length": 134,
+            "releaseDate": "2021-05-28",
+            "TrailerUrl": "https://www.youtube.com/watch?v=gmRKv7n2If8",
+            "IsFeatured": false,
+            "promoType" : "Early Access",
+            "addedOn": "2021-06-28"
         }
     ],
     "shows":[
