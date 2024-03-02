@@ -15,7 +15,8 @@
             "releaseDate": "2021-09-05",
             "TrailerUrl": "https://www.youtube.com/watch?v=0WVDKZJkGlY",
             "IsFeatured": true,
-            "addedOn": "2021-10-05"
+            "addedOn": "2021-10-05",
+            "promoType":"Home Theatre"
         },
         {
             "id":2,
@@ -156,7 +157,8 @@
             "releaseDate": "2021-09-03",
             "TrailerUrl": "https://www.youtube.com/watch?v=8YjFbMbfXaQ",
             "IsFeatured": false,
-            "addedOn": "2022-01-03"
+            "addedOn": "2022-01-03",
+            "promoType":"Home Theatre"
         },
         {
             "id":5,
