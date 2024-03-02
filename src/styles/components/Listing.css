@@ -1,27 +1,187 @@
-.mainContainer{
-    height: 100%;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+.listingContainer{
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto auto auto;
+    /* background-color: violet; */
+}
+.no_featured_top_card_2{
+    display: none;
 }
 
-body {
+.featured_top_card_free_2 {
+    position: absolute;
     background-color: red;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-transform: uppercase;
+    border-radius: 10px 10px 0 0;
+}
+
+.featured_top_card_free_2 p {
+    padding: 0;
+    margin: 0;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-family: "Nunito", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.featured_top_card_early_2 {
+    position: absolute;
+    background-color: rebeccapurple;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-transform: uppercase;
+    border-radius: 10px 10px 0 0;
+}
+
+.featured_top_card_early_2 p {
+    padding: 0;
+    margin: 0;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-family: "Nunito", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.featured_top_card_theater_2 {
+    position: absolute;
+    background-color: #ffffff;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: red;
+    border-radius: 10px 10px 0 0;
+}
+
+.featured_top_card_theater_2 p{
+    padding: 0;
+    margin: 0;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-family: "Nunito", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    text-transform: uppercase;
+}
+
+.featured_card_style_2{
+    min-width: 5em;
+    min-height: 15em;
+    margin-right: 0.5em;
+    margin-left: 0.5em;
+    margin-top: 1em;
+    background-color: transparent;
+    border-radius: 10px;
+}
+
+.featured_overlay_2{
+    position: absolute;
+    display: flex;
+    background-color: black;
+    color: white;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px;
+    text-align: center;
+    opacity: 0%;
+    transition: 0.4s;
+}
+
+.featured_overlay_2:hover {
+    opacity: 70%;
+}
+/* On screens that are 1200px or less, set the background color to blue */
+@media screen and (max-width: 1550px) {
+    .featured_overlay_2 h3{
+        font-size: 1em;
+    }
+
+    .featured_overlay_2 p{
+        font-size: 1em;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+                line-clamp: 3; 
+        -webkit-box-orient: vertical;
+    }
+
+    .listingContainer{
+        display: grid;
+        grid-template-columns: auto auto auto auto auto auto auto;
+    }
+
+    .featured_card_style_2{
+        min-width: 5em;
+        min-height: 15em;
+        margin-right: 0.5em;
+        margin-left: 0.5em;
+        margin-top: 1em;
+        background-color: transparent;
+        border-radius: 10px;
+    }
+
 }
 
 
 /* On screens that are 992px or less, set the background color to blue */
 @media screen and (max-width: 992px) {
-    body {
-        background-color: blue;
+    .listingContainer{
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        /* background-color: red; */
     }
+
+    .featured_card_style_2{
+        min-width: 8.2em;
+        min-height: 11em;
+        margin-right: 0.5em;
+        margin-left: 0.5em;
+        margin-top: 1em;
+        background-color: transparent;
+        border-radius: 10px;
+    }
+
 }
 
 /* On screens that are 600px or less, set the background color to olive */
 @media screen and (max-width: 600px) {
-    body {
-        background-color: olive;
+    .listingContainer{
+        display: grid;
+        grid-template-columns: auto auto;
+        justify-content: center;
+        align-items: center;
+        margin-top: 2.15em;
+    }
+
+    .featured_card_style_2{
+        min-width: 8.2em;
+        min-height: 11em;
+        margin-right: 0.5em;
+        margin-left: 0.5em;
+        margin-top: 1em;
+        background-color: transparent;
+        border-radius: 10px;
+    }
+
+    .featured_top_card_theater_2, .featured_top_card_early_2, .featured_top_card_free_2  p{
+        font-size: 0.8em;
     }
 
 }

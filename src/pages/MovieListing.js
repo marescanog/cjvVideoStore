@@ -185,8 +185,7 @@ const MovieListing = ({watchType}) => {
                 ))}
               </ButtonGroup>
             </div>
-            <Listing/>
-            <p>{JSON.stringify(movieData, null, '\t')}</p>
+            <Listing list={movieData}/>
         </div>
         <Footer/>  
     </div>
