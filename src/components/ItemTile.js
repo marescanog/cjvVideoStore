@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 const ItemTile = ({title, append, el, indx}) => {
   return (
     <Card key={(title??"")+Random.randomAlphanumeric(6, "lowercase")+indx} className={`featured_card_style${append??""}`} as={Link} to={'/details/'+el.id}>
-        <div className={"featured_overlay"}>
+        <div className={`featured_overlay${append??""}`}>
             <h3>{el.title}</h3>
             <p>{el.description}</p>
         </div>
@@ -17,7 +17,7 @@ const ItemTile = ({title, append, el, indx}) => {
                         ) : `no_featured_top_card${append??""}` }>
             <p>{el?.promoType}</p>
         </div>
-        <Card.Img variant="top" src={el.posterImage} className={`featured_img_style${append??""}`}/>
+        <Card.Img variant="top" src={el.posterImage} className={`featured_img_style`}/>
     </Card>
   )
 }

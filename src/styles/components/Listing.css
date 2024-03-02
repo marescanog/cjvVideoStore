@@ -77,8 +77,8 @@
 }
 
 .featured_card_style_2{
-    min-width: 5em;
-    min-height: 15em;
+    min-width: 10em;
+    min-height: 20em;
     margin-right: 0.5em;
     margin-left: 0.5em;
     margin-top: 1em;
@@ -106,21 +106,24 @@
 .featured_overlay_2:hover {
     opacity: 70%;
 }
+
+.featured_overlay_2 p{
+    font-size: 1em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+            line-clamp: 3; 
+    -webkit-box-orient: vertical;
+}
+
 /* On screens that are 1200px or less, set the background color to blue */
 @media screen and (max-width: 1550px) {
     .featured_overlay_2 h3{
         font-size: 1em;
     }
 
-    .featured_overlay_2 p{
-        font-size: 1em;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        display: -webkit-box;
-        -webkit-line-clamp: 3;
-                line-clamp: 3; 
-        -webkit-box-orient: vertical;
-    }
+
 
     .listingContainer{
         display: grid;
