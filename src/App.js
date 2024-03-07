@@ -11,9 +11,6 @@ import About from './pages/About';
 import Contact from './pages/Contact';
 
 const App = () => {
-
-  const [refresh, setRefresh] = useState(false);
-
   return (
     <div>
       <BrowserRouter>

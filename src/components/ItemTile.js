@@ -13,7 +13,8 @@ const ItemTile = ({title, append, el, indx}) => {
         <div className={el?.promoType ? (
                             el?.promoType == "Free with Ads" ? `featured_top_card_free${append??""}` :
                             ( el?.promoType == "Early Access" ? `featured_top_card_early${append??""}` :
-                            `featured_top_card_theater${append??""}`)
+                            ( el?.promoType == "Home Theatre" ? `featured_top_card_early${append??""}` :
+                            `no_featured_top_card${append??""}`) )
                         ) : `no_featured_top_card${append??""}` }>
             <p>{el?.promoType}</p>
         </div>

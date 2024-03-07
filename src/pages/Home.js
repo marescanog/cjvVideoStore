@@ -9,15 +9,37 @@ import '../styles/Home.css';
 
 const Home = () => {
   const [heroData, setHeroData] = useState([]);
+  const [featured2021Movies, seFeatured2021Movies] = useState([]);
+  const [featured2021TV, seFeatured2021TV] = useState([]);
 
+  const filter2021Featured = () => {
+
+  }
   useEffect(() => {
-    fetch('http://localhost:8000/movies')
+    fetch('http://localhost:8000/movies?mostDemanded=true')
+    .then((res) => {
+      return res.json();
+    })
+    .then((data) => {
+      setHeroData(data);
+    });
+
+    fetch('http://localhost:8000/movies?IsFeatured=true')
       .then((res) => {
         return res.json();
       })
       .then((data) => {
-        setHeroData(data);
+        seFeatured2021Movies(data);
       });
+
+    fetch('http://localhost:8000/shows?IsFeatured=true')
+      .then((res) => {
+        return res.json();
+      })
+      .then((data) => {
+        seFeatured2021TV(data);
+      });
+
   }, []);
 
   return (
@@ -27,9 +49,9 @@ const Home = () => {
         <div className='homeContainer'>
           <Header title={'Start Your Ultimate Binge Journey Today!'} />
           <Hero list={heroData}/>
-          <Featured title={'Featured Films'} featuredList={heroData} />
+          <Featured title={'Featured Films'} featuredList={featured2021Movies} />
           <div className="home_space_featured">
-            <Featured  title={'Featured TV Shows'} featuredList={heroData} />
+            <Featured  title={'Featured TV Shows'} featuredList={featured2021TV} />
           </div>
           <div className="home_space_featured">
             <Content /> 
