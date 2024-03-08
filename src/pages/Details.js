@@ -6,12 +6,14 @@ import Image from 'react-bootstrap/Image';
 import Button from 'react-bootstrap/Button';
 import { Rating } from 'react-simple-star-rating'
 import { useParams } from "react-router-dom";
-import Swal from 'sweetalert2'
+import Swal from 'sweetalert2';
+import { useCookies } from 'react-cookie';
 import '../styles/Details.css';
 
 const Details = () => {
   const [details, setDetails] = useState({})
   let { id, type } = useParams();
+  const [cookies] = useCookies(['jwt','id']);
 
   useEffect(()=>{
     fetch(`http://localhost:8000/${type}?id=${id}`)
@@ -37,6 +39,45 @@ const Details = () => {
       `
     });
   }
+
+  const verifyIfUserLoggedIn = () => {
+    return new Promise((res)=>{
+      res(cookies.hasOwnProperty('jwt') && cookies['jwt'] != null);
+    })
+  }
+
+  const addToWatchList = ({id, type}) => {
+    verifyIfUserLoggedIn()
+    .then(res=>{
+      if(res == true){
+
+      } else {
+        Swal.fire({
+          icon: "info",
+          title: "Please Login",
+          text: "Please login to your account to add to your list.",
+          footer: '<a href="/login" style="color:blue">Sign in to your account</a>'
+        });
+      }
+    });
+  }
+
+  const redeemItem = ({id, type}) => {
+    verifyIfUserLoggedIn()
+    .then(res=>{
+      if(res == true){
+
+      } else {
+        Swal.fire({
+          icon: "info",
+          title: "Please Login",
+          text: "Please login to your account to add to your list.",
+          footer: '<a href="/login" style="color:blue">Sign in to your account</a>'
+        });
+      }
+    });
+  }
+
   return (
     <div className="mainContainer">
         <div>
@@ -101,8 +142,13 @@ const Details = () => {
                   onClick={()=>{
                     openTrailerModal(details?.TrailerUrl);
                   }}>Trailer</Button>
-                  <Button variant="outline-info" className='details-buttons-info mr-3 ml-3'>List</Button>
-                  <Button variant="outline-info" className='details-buttons-info'>Redeem</Button>
+                  <Button variant="outline-info" className='details-buttons-info mr-3 ml-3'
+                  onClick={()=>{
+                    addToWatchList({id: details?.id, type:type});
+                  }}>List</Button>
+                  <Button variant="outline-info" className='details-buttons-info' onClick={()=>{
+                    redeemItem({id: details?.id, type:type});
+                  }}>Redeem</Button>
                 </div>
 
                 <div className='details_desc_container'>
@@ -112,9 +158,9 @@ const Details = () => {
                 </div>
                 
 
-                <div>
-                  <Button variant="info" >Rent       {JSON.stringify(details?.rentPrice)}</Button>
-                  <Button variant="info" >Buy       {JSON.stringify(details?.buyPrice)}</Button>
+                <div className='details-rent-buy-section'>
+                  <Button variant="info" className='details-rentBuy-button'>Rent       {JSON.stringify(details?.rentPrice)}</Button>
+                  <Button variant="info" className='details-rentBuy-button' >Buy       {JSON.stringify(details?.buyPrice)}</Button>
                 </div>
               </div>
             </div>
@@ -123,7 +169,7 @@ const Details = () => {
             <Image src={details?.backgroundImage} fluid className='details-img'/>
           </div>
         </div>
-        <p>{JSON.stringify(details)}</p>
+        {/* <p>{JSON.stringify(details)}</p> */}
         <Footer/>  
     </div>
   )

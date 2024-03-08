@@ -28,7 +28,6 @@
 
 .details-img-section {
     width: 60%;
-    background-color: yellow;
     height: 80vh;
 }
 
@@ -149,18 +148,47 @@
 }
 
 .details_desc_container{
-
+    padding-top: 2em;
+    padding-bottom: 2em;
 }
 
-.details_desc{
-
+.details-rent-buy-section{
+    display: flex;
+    flex-direction: row;
 }
+
+.details-rentBuy-button{
+    margin-right: 1em;
+    padding: 1em;
+    font-weight: 700;
+}
+
 /* On screens that are 992px or less, set the background color to blue */
 @media screen and (max-width: 992px) {
+    .details-info-bg-section{
+        /* background: rgb(4,28,44); */
+        position: absolute;
+        bottom: 0;
+        background: linear-gradient(360deg, rgba(4,28,44,1) 83%, rgba(4,28,44,0) 95%);
+        width: 100%;
+        height: 50vh;
+    }
 
+    .details-img-section {
+        width: 100%;
+        height: 50vh;
+    }
 }
 
 /* On screens that are 600px or less, set the background color to olive */
 @media screen and (max-width: 600px) {
+    .details-img-section {
+        width: 100%;
+        height: 30vh;
+    }
 
+    .universal_container{
+        margin: 0;
+        padding: 0;
+    }
 }
