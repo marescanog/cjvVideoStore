@@ -31,7 +31,7 @@ const Registration = () => {
       event.preventDefault();
 
       bcrypt.genSalt(10, function(err, salt) {
-        bcrypt.hash("B4c0/\/", salt, function(err, hash) {
+        bcrypt.hash(inputs.password, salt, function(err, hash) {
             fetch('http://localhost:8000/users', {
               method: 'POST',
               headers: {
@@ -63,6 +63,11 @@ const Registration = () => {
             },
             (error)=>{
               console.log(error); // API Call failed 
+              Swal.fire({
+                icon: "error",
+                title: "Something went wrong!",
+                text: "Please try again",
+              })
             }
             );
         });
