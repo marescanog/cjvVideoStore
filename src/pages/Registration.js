@@ -47,7 +47,7 @@ const Registration = () => {
             })
           }).then(res => res.json())
             .then((res) => {
-              console.log(res)
+              // console.log(res)
               Swal.fire({
                 icon: "success",
                 title: "Submitted",

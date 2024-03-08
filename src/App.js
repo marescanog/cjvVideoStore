@@ -9,8 +9,10 @@ import Details from './pages/Details';
 import Registration from './pages/Registration';
 import About from './pages/About';
 import Contact from './pages/Contact';
-
+import Account from './pages/Account';
+import Logout from './pages/Logout';
 const App = () => {
+
   return (
     <div>
       <BrowserRouter>
@@ -24,6 +26,8 @@ const App = () => {
           <Route path='/signup' element={<Registration/>} />
           <Route path='/about' element={<About/>} />
           <Route path='/contact' element={<Contact/>} />
+          <Route path='/account' element={<Account/>} />
+          <Route path='/logout' element={<Logout/>} />
           <Route path='*' element={<NoPage/>} />
         </Routes>
       </BrowserRouter>

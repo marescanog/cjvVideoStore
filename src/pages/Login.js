@@ -9,12 +9,14 @@ import Swal from 'sweetalert2'
 import bcrypt from "bcryptjs-react";
 import jwtDecode from 'jwt-decode';
 import '../styles/Registration.css';
-
-
+import { useCookies } from 'react-cookie';
 const Login = () => {
   const [validated, setValidated] = useState(false);
   const [inputs, setInputs] = useState({});
-
+  const [cookies, setCookie] = useCookies(['jwt']);
+  function setJwt(newValue) {
+    setCookie('jwt', newValue);
+  }
   const handleChange = (event) => {
     const name = event.target.name;
     const value = event.target.value;
@@ -52,7 +54,17 @@ const Login = () => {
                       })
                     }).then(res2 => res2.json())
                     .then(res3 => {
-                      console.log(res3);
+                      setJwt(res3);
+                      Swal.fire({
+                        icon: "success",
+                        title: "Submitted",
+                        text: "Please wait for verification!",
+                        allowOutsideClick: false
+                      }).then((result) => {
+                        if (result.isConfirmed) {
+                          window.location.replace("http://localhost:3000/account");
+                        }
+                      });
                     })
                   } else {
                     Swal.fire({
@@ -72,6 +84,11 @@ const Login = () => {
             },
             (error)=>{
               console.log(error); // API Call failed 
+              Swal.fire({
+                icon: "error",
+                title: "Something went wrong!",
+                text: "Please try again",
+              })
             }
             );
         });
@@ -82,7 +99,7 @@ const Login = () => {
     <div className="mainContainer">
         <div>
           <NavigationBar/>
-          <Header title={'Registration'} center/>
+          <Header title={'Log into yur account'} center/>
         </div>
         <div className='universal_container registration-form-container'>
           <Card className='registration-card-style'>

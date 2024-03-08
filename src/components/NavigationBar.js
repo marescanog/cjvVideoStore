@@ -1,11 +1,18 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { NavLink } from 'react-router-dom';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import '../styles/components/Navigation.css';
+import { useCookies } from 'react-cookie';
 
 const NavigationBar = () => {
+  const [cookies] = useCookies(['jwt']);
+
+  useEffect(()=>{
+
+  },[cookies.hasOwnProperty('jwt')])
+
   return (
     <Navbar expand="lg" data-bs-theme="dark" className="navigation_container" sticky="top">
       <Container fluid >
@@ -20,10 +27,19 @@ const NavigationBar = () => {
             <Nav.Link as={NavLink} to="/movies">Movies</Nav.Link>
             <Nav.Link as={NavLink} to="/tv">TV</Nav.Link>
           </Nav>
-          <Nav className="justify-content-end">
-            <Nav.Link as={NavLink} to="/signup">Signup</Nav.Link>
-            <Nav.Link as={NavLink} to="/login">Login</Nav.Link>
-          </Nav>
+          {
+            cookies.hasOwnProperty('jwt') && cookies['jwt'] != null ? 
+            <Nav className="justify-content-end">
+              <Nav.Link as={NavLink} to="/account">My Account</Nav.Link>
+              <Nav.Link as={NavLink} to="/logout">Logout</Nav.Link>
+            </Nav>
+            :
+            <Nav className="justify-content-end">
+              <Nav.Link as={NavLink} to="/signup">Signup</Nav.Link>
+              <Nav.Link as={NavLink} to="/login">Login</Nav.Link>
+            </Nav>
+          }
+
         </Navbar.Collapse>
       </Container>
     </Navbar>
