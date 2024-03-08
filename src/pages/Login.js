@@ -13,9 +13,12 @@ import { useCookies } from 'react-cookie';
 const Login = () => {
   const [validated, setValidated] = useState(false);
   const [inputs, setInputs] = useState({});
-  const [cookies, setCookie] = useCookies(['jwt']);
+  const [cookies, setCookie] = useCookies(['jwt','id']);
   function setJwt(newValue) {
     setCookie('jwt', newValue);
+  }
+  function setId(newValue) {
+    setCookie('id', newValue);
   }
   const handleChange = (event) => {
     const name = event.target.name;
@@ -39,7 +42,7 @@ const Login = () => {
         bcrypt.hash("B4c0/\/", salt, function(err, hash) {
             fetch(`http://localhost:8000/users?email=${inputs.email}`).then(res => res.json())
             .then((fetchRes) => {
-              if(fetchRes.length > 0){
+              if(fetchRes.length > 0 && fetchRes[0].isVerified == true){
                 bcrypt.compare(inputs.password, fetchRes[0].password, function(err, res) {
                   if(res === true){
                     // get jwt token
@@ -55,10 +58,11 @@ const Login = () => {
                     }).then(res2 => res2.json())
                     .then(res3 => {
                       setJwt(res3);
+                      setId(fetchRes[0].id);
                       Swal.fire({
                         icon: "success",
-                        title: "Submitted",
-                        text: "Please wait for verification!",
+                        title: "Success",
+                        text: "You will now be reidrected to your account page",
                         allowOutsideClick: false
                       }).then((result) => {
                         if (result.isConfirmed) {
