@@ -5,22 +5,55 @@
     flex-direction: column;
     justify-content: space-between;
 }
-body {
-    background-color: red;
+
+.registration-form-container{
+    display: flex;
+    justify-content: center;
+    height: 70vh;
 }
 
+.registration-card-style{
+    width: 45%;
+    height: fit-content;
+}
+
+.registration-button-style {
+    flex: 1 !important;
+    width: 100%;
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+.registration-card-body-style{
+    padding: 30px 50px 30px 50px;
+}
+
+.registration-title-text-style{
+    text-align: center !important;
+}
 
 /* On screens that are 992px or less, set the background color to blue */
 @media screen and (max-width: 992px) {
-    body {
-        background-color: blue;
+    .registration-card-style{
+        width: 80%;
+    }
+
+    .registration-form-container{
+        height: 65vh;
     }
 }
 
 /* On screens that are 600px or less, set the background color to olive */
 @media screen and (max-width: 600px) {
-    body {
-        background-color: olive;
+    .registration-card-style{
+        width: 100%;
     }
 
+    .registration-card-body-style{
+        padding: 20px;
+    }
+
+    .registration-form-container{
+        height: 50vh;
+    }
 }

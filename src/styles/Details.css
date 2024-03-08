@@ -147,6 +147,14 @@
     text-overflow: ellipsis !important;
     overflow: hidden !important;
 }
+
+.details_desc_container{
+
+}
+
+.details_desc{
+
+}
 /* On screens that are 992px or less, set the background color to blue */
 @media screen and (max-width: 992px) {
 

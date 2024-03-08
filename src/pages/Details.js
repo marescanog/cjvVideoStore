@@ -48,7 +48,7 @@ const Details = () => {
                     : <></>
                   }
                   <p className="genre-text-style">| {details?.releaseYear}</p>
-                  
+
                   <div className="mrating-box-style">
                     <p className="mrating-text-style">{details?.MPARating}</p>
                   </div>
@@ -88,9 +88,12 @@ const Details = () => {
                   <Button variant="outline-info" className='details-buttons-info'>Redeem</Button>
                 </div>
 
-                <div>
-                  {JSON.stringify(details?.description)}
+                <div className='details_desc_container'>
+                  <p className='details_desc'>
+                    {JSON.stringify(details?.description)}
+                  </p>
                 </div>
+                
 
                 <div>
                   <Button variant="info" >Rent       {JSON.stringify(details?.rentPrice)}</Button>
