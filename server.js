@@ -32,3 +32,14 @@ app.post('/api/jwt', async (req, res) => {
         res.status(500).json({ message: 'Failed to fetch data' });
     }
   });
+
+  app.post('/api/jwt/decode', async (req, res) => {
+    const { jwt } = req.body;
+    try {
+        const token = jwt.sign({ userId: id }, SECRET_KEY, { expiresIn: '1h' });
+        res.json({ token });
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({ message: 'Failed to fetch data' });
+    }
+  });

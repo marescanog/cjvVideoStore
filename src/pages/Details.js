@@ -6,6 +6,7 @@ import Image from 'react-bootstrap/Image';
 import Button from 'react-bootstrap/Button';
 import { Rating } from 'react-simple-star-rating'
 import { useParams } from "react-router-dom";
+import Swal from 'sweetalert2'
 import '../styles/Details.css';
 
 const Details = () => {
@@ -23,6 +24,19 @@ const Details = () => {
 
   },[]);
 
+  const openTrailerModal = (url) => {
+    Swal.fire({
+      title: "<strong>YouTube Trailer</u></strong>",
+      background: 'rgb(0,116,185)',
+      color: 'white',
+      confirmButtonColor: '#041c2c',
+      html: `
+        <iframe width="420" height="315"
+        src=${url}>
+        </iframe>
+      `
+    });
+  }
   return (
     <div className="mainContainer">
         <div>
@@ -42,7 +56,7 @@ const Details = () => {
                   {
                     details?.genre && details?.genre.length > 0 ? (
                       details?.genre.map((el,index, arr)=>{
-                        return <p className="genre-text-style">{el} {index!=arr.length-1?"|":""}</p>
+                        return <p key={`${index}${JSON.stringify(el)}`} className="genre-text-style">{el} {index!=arr.length-1?"|":""}</p>
                       })
                     )
                     : <></>
@@ -83,7 +97,10 @@ const Details = () => {
                 </div>
 
                 <div className='buttons-section'>
-                  <Button variant="outline-info" className='details-buttons-info'>Trailer</Button>
+                  <Button variant="outline-info" className='details-buttons-info'
+                  onClick={()=>{
+                    openTrailerModal(details?.TrailerUrl);
+                  }}>Trailer</Button>
                   <Button variant="outline-info" className='details-buttons-info mr-3 ml-3'>List</Button>
                   <Button variant="outline-info" className='details-buttons-info'>Redeem</Button>
                 </div>
