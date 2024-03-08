@@ -3,6 +3,7 @@ import NavigationBar from '../components/NavigationBar';
 import Footer from '../components/Footer';
 import Header from '../components/Header';
 import Image from 'react-bootstrap/Image';
+import Button from 'react-bootstrap/Button';
 import { useParams } from "react-router-dom";
 import '../styles/Details.css';
 
@@ -50,15 +51,9 @@ const Details = () => {
                 </div>
 
                 <div className='buttons-section'>
-                  <div>
-                    <p>Trailer</p>
-                  </div>  
-                  <div>
-                    <p>List</p>
-                  </div>
-                  <div>
-                    <p>Redeem</p>
-                  </div>
+                  <Button variant="outline-info" className='details-buttons-info'>Trailer</Button>
+                  <Button variant="outline-info" className='details-buttons-info mr-3 ml-3'>List</Button>
+                  <Button variant="outline-info" className='details-buttons-info'>Redeem</Button>
                 </div>
 
                 <div>

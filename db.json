@@ -4,7 +4,7 @@
             "id":1,
             "title": "Eternals",
             "description": "The saga of the Eternals, a race of immortal beings who lived on Earth and shaped its history and civilizations.",
-            "rating": 6.3,
+            "rating": 9.3,
             "genre": ["Action", "Adventure", "Fantasy"],
             "rentPrice": 10.99,
             "buyPrice": 14.99,
@@ -18,7 +18,8 @@
             "addedOn": "2021-10-05",
             "promoType":"Home Theatre",
             "mostDemanded":"true",
-            "releaseYear":2021
+            "releaseYear":2021,
+            "totalRatings": 867
         },
         {
             "id":2,
@@ -38,7 +39,8 @@
             "promoType" : "Free with Ads",
             "addedOn": "2021-12-21",
             "mostDemanded":"true",
-            "releaseYear":2021
+            "releaseYear":2021,
+            "totalRatings": 833
         },
         {
             "id":3,
@@ -57,7 +59,8 @@
             "IsFeatured": "false",
             "addedOn": "2021-08-02",
             "mostDemanded":"true",
-            "releaseYear":2021
+            "releaseYear":2021,
+            "totalRatings": 965
         },
         {
             "id":4,
@@ -76,7 +79,8 @@
             "IsFeatured": "false",
             "addedOn": "2022-01-03",
             "mostDemanded":"true",
-            "releaseYear":2021
+            "releaseYear":2021,
+            "totalRatings": 945
         },
         {
             "id":5,
@@ -96,7 +100,8 @@
             "promoType" : "Early Access",
             "addedOn": "2021-06-28",
             "mostDemanded":"true",
-            "releaseYear":2021
+            "releaseYear":2021,
+            "totalRatings": 933
         },
         {
             "id":6,
@@ -114,7 +119,8 @@
             "TrailerUrl": "https://www.youtube.com/watch?v=JfVOs4VSpmA&pp=ygUcc3BpZGVybWFuIG5vIHdheSBob21lIHRyYWlsZQ%3D%3D",
             "mostDemanded":"true",
             "releaseYear":2021,
-            "promoType" : "Early Access"
+            "promoType" : "Early Access",
+            "totalRatings": 893
         },
         {
             "id":7,
@@ -133,7 +139,8 @@
             "IsFeatured": "false",
             "mostDemanded":"true",
             "releaseYear":2021,
-            "promoType":"Home Theatre"
+            "promoType":"Home Theatre",
+            "totalRatings": 932
         },
         {
             "id":8,
@@ -152,7 +159,8 @@
             "IsFeatured": "false",
             "mostDemanded":"true",
             "releaseYear":2021,
-            "promoType" : "Early Access"
+            "promoType" : "Early Access",
+            "totalRatings": 934
         },
         {
             "id":9,
@@ -171,7 +179,8 @@
             "IsFeatured": "false",
             "mostDemanded":"true",
             "releaseYear":2021,
-            "promoType" : "Free with Ads"
+            "promoType" : "Free with Ads",
+            "totalRatings": 978
         },
         {
             "id":10,
@@ -187,7 +196,8 @@
             "Length": 148,
             "releaseDate": "2010-07-16",
             "TrailerUrl": "https://www.youtube.com/watch?v=8hP9D6kZseM&pp=ygURSW5jZXB0aW9uIHRyYWlsZXI%3D",
-            "releaseYear":2010
+            "releaseYear":2010,
+            "totalRatings": 425
         },
         {
             "id":11,
@@ -206,7 +216,8 @@
             "IsFeatured": "false",
             "mostDemanded":"true",
             "releaseYear":2010,
-            "promoType":"Home Theatre"
+            "promoType":"Home Theatre",
+            "totalRatings": 242
         },
         {
             "id":12,
@@ -223,7 +234,8 @@
             "releaseDate": "2010-10-01",
             "TrailerUrl": "https://www.youtube.com/watch?v=lB95KLmpLR4&pp=ygUSVGhlIFNvY2lhbCBOZXR3b3Jr",
             "mostDemanded":"true",
-            "releaseYear":2010
+            "releaseYear":2010,
+            "totalRatings": 517
         },
         {
             "id":13,
@@ -242,7 +254,8 @@
             "IsFeatured": "false",
             "mostDemanded":"true",
             "releaseYear":2010,
-            "promoType" : "Free with Ads"
+            "promoType" : "Free with Ads",
+            "totalRatings": 661
         },
         {
             "id":14,
@@ -261,7 +274,8 @@
             "IsFeatured": "false",
             "mostDemanded":"true",
             "releaseYear":2010,
-            "promoType" : "Early Access"
+            "promoType" : "Early Access",
+            "totalRatings": 866
         },
         {
             "id":15,
@@ -279,7 +293,8 @@
             "TrailerUrl": "https://www.youtube.com/watch?v=oKiYuIsPxYk&pp=ygUgSG93IHRvIFRyYWluICB5b3VyIGRyYWdvbnRyYWlsZXI%3D",
             "IsFeatured": "false",
             "mostDemanded":"true",
-            "releaseYear":2010
+            "releaseYear":2010,
+            "totalRatings": 418
         },
         {
             "id":16,
@@ -297,7 +312,8 @@
             "TrailerUrl": "https://www.youtube.com/watch?v=2rpXHqnGDXo&pp=ygUQS2ljay1Bc3MgdHJhaWxlcg%3D%3D",
             "IsFeatured": "false",
             "releaseYear":2010,
-            "promoType":"Home Theatre"
+            "promoType":"Home Theatre",
+            "totalRatings": 626
         },
         {
             "id":17,
@@ -314,7 +330,8 @@
             "releaseDate": "2010-03-05",
             "TrailerUrl": "https://www.youtube.com/watch?v=9POCgSRVvf0&pp=ygUgQWxpY2UgaW4gV29uZGVybGFuZCAyMDEwIHRyYWlsZXI%3D",
             "IsFeatured": "true",
-            "releaseYear":2010
+            "releaseYear":2010,
+            "totalRatings": 438
         },
         {
             "id":18,
@@ -331,7 +348,8 @@
             "releaseDate": "2010-05-07",
             "TrailerUrl": "https://www.youtube.com/watch?v=BoohRoVA9WQ&pp=ygURSXJvbm1hbiAyIHRyYWlsZXI%3D",
             "IsFeatured": "false",
-            "releaseYear":2010
+            "releaseYear":2010,
+            "totalRatings": 731
         },
         {
             "id":19,
@@ -349,7 +367,8 @@
             "TrailerUrl": "https://www.youtube.com/watch?v=zzCZ1W_CUoI&pp=ygUUZGVwaXNhYmxlIG1lIHRyYWlsZXI%3D",
             "IsFeatured": "true",
             "releaseYear":2010,
-            "promoType" : "Free with Ads"
+            "promoType" : "Free with Ads",
+            "totalRatings": 365
         },
         {
             "id":20,
@@ -366,7 +385,8 @@
             "releaseDate": "2020-01-17",
             "TrailerUrl": "https://www.youtube.com/watch?v=jKCj3XuPG8M&pp=ygUZQmFkIGJveXMgZm9yIGxpZmUgdHJhaWxlcg%3D%3D",
             "IsFeatured": "false",
-            "releaseYear":2020
+            "releaseYear":2020,
+            "totalRatings": 728
         },
         {
             "id":21,
@@ -383,7 +403,8 @@
             "releaseDate": "2020-02-12",
             "TrailerUrl": "https://www.youtube.com/watch?v=szby7ZHLnkA&pp=ygUaU29uaWMgdGhlIEhlZGdlaG9nIHRyYWlsZXI%3D",
             "IsFeatured": "false",
-            "releaseYear":2020
+            "releaseYear":2020,
+            "totalRatings": 251
         },
         {
             "id":22,
@@ -393,7 +414,7 @@
             "genre": ["Action", "Crime", "Adventure"],
             "rentPrice": 3.99,
             "buyPrice": 19.99,
-            "posterImage": "https://static.wikia.nocookie.net/marvel_dc/images/f/f7/Birds_of_Prey_Teaser.jpg/revision/latest?cb=20200110180701",
+            "posterImage": "https://upload.wikimedia.org/wikipedia/en/1/1c/Birds_of_Prey_%282020_film%29_poster.jpg",
             "backgroundImage": "https://images.squarespace-cdn.com/content/v1/608d9ef497633c6b6eb71caf/1620735064662-BI9NNTIWRB44LW8UC939/birds-of-prey-who-are-the-birds-in-harley-quinns-upcoming-mo_172m.h960.jpg",
             "MPARating": "R",
             "Length": 109,
@@ -401,7 +422,8 @@
             "TrailerUrl": "https://www.youtube.com/watch?v=kGM4uYZzfu0&pp=ygUVQmlyZHMgb2YgUHJleSB0cmFpbGVy",
             "IsFeatured": "false",
             "releaseYear":2020,
-            "promoType":"Home Theatre"
+            "promoType":"Home Theatre",
+            "totalRatings": 946
         },
         {
             "id":23,
@@ -418,7 +440,8 @@
             "releaseDate": "2020-01-17",
             "TrailerUrl": "https://www.youtube.com/watch?v=zjm6rDgKNMY&pp=ygUURG9saXR0bGUgMjAyIHRyYWlsZXI%3D",
             "IsFeatured": "true",
-            "releaseYear":2020
+            "releaseYear":2020,
+            "totalRatings": 326
         },
         {
             "id":24,
@@ -435,7 +458,8 @@
             "releaseDate": "2020-02-24",
             "TrailerUrl": "https://www.youtube.com/watch?v=dSBsNeYqh-k&pp=ygUdVGhlIGludmlzaWJsZSBtYW4gMjAyIHRyYWlsZXI%3D",
             "IsFeatured": "false",
-            "releaseYear":2020
+            "releaseYear":2020,
+            "totalRatings": 170
         },
         {
             "id":25,
@@ -453,7 +477,8 @@
             "TrailerUrl": "https://www.youtube.com/watch?v=L3pk_TBkihU&pp=ygUNVGVuZXQgdHJhaWxlcg%3D%3D",
             "IsFeatured": "false",
             "releaseYear":2020,
-            "promoType" : "Free with Ads"
+            "promoType" : "Free with Ads",
+            "totalRatings": 395
         },
         {
             "id":26,
@@ -470,7 +495,8 @@
             "releaseDate": "2019-05-30",
             "TrailerUrl": "https://www.youtube.com/watch?v=SWSDQfJQhUg&pp=ygUOUGFyYXNpdGUgbW92aWU%3D",
             "IsFeatured": "false",
-            "releaseYear":2019
+            "releaseYear":2019,
+            "totalRatings": 345
         },
         {
             "id":27,
@@ -487,7 +513,8 @@
             "releaseDate": "2019-08-04",
             "TrailerUrl": "https://www.youtube.com/watch?v=rgrWXTz_8eU&pp=ygUSSm9rZXIgMjAxOSB0cmFpbGVy",
             "IsFeatured": "false",
-            "releaseYear":2019
+            "releaseYear":2019,
+            "totalRatings": 698
         },
         {
             "id":28,
@@ -505,7 +532,8 @@
             "TrailerUrl": "https://www.youtube.com/watch?v=gZjQROMAh_s&pp=ygUMMTkxNyB0cmFpbGVy",
             "IsFeatured": "true",
             "releaseYear":2019,
-            "promoType":"Home Theatre"
+            "promoType":"Home Theatre",
+            "totalRatings": 946
         },
         {
             "id":29,
@@ -522,7 +550,8 @@
             "releaseDate": "2018-02-14",
             "TrailerUrl": "https://www.youtube.com/watch?v=xjDjIWPwcPU&pp=ygUVQmxhY2sgUGFudGhlciB0cmFpbGVy",
             "IsFeatured": "false",
-            "releaseYear":2018
+            "releaseYear":2018,
+            "totalRatings": 994
         },
         {
             "id":30,
@@ -539,7 +568,8 @@
             "releaseDate": "2018-04-27",
             "TrailerUrl": "https://www.youtube.com/watch?v=6ZfuNTqbHE8&pp=ygUcQXZlbmdlciBJbmZpbml0eSBXYXIgdHJhaWxlcg%3D%3D",
             "IsFeatured": "false",
-            "releaseYear":2018
+            "releaseYear":2018,
+            "totalRatings": 940
         },
         {
             "id":31,
@@ -556,7 +586,8 @@
             "releaseDate": "2018-06-15",
             "TrailerUrl": "https://www.youtube.com/watch?v=i5qOzqD9Rms&pp=ygUVSW5jcmVkaWJsZXMgMiB0cmFpbGVy",
             "IsFeatured": "true",
-            "releaseYear":2018
+            "releaseYear":2018,
+            "totalRatings": 842
         },
         {
             "id":32,
@@ -573,7 +604,8 @@
             "releaseDate": "2017-02-24",
             "TrailerUrl": "https://www.youtube.com/watch?v=DzfpyUB60YY&pp=ygUPR2V0IE91dCB0cmFpbGVy",
             "IsFeatured": "false",
-            "releaseYear":2017
+            "releaseYear":2017,
+            "totalRatings": 354
         },
         {
             "id":33,
@@ -591,7 +623,8 @@
             "TrailerUrl": "https://www.youtube.com/watch?v=1Q8fG0TtVAY&pp=ygUUV29uZGVyIFdvbWFuIHRyYWlsZXI%3D",
             "IsFeatured": "false",
             "releaseYear":2017,
-            "promoType" : "Free with Ads"
+            "promoType" : "Free with Ads",
+            "totalRatings": 491
         },
         {
             "id":34,
@@ -609,7 +642,8 @@
             "TrailerUrl": "https://www.youtube.com/watch?v=xlnPHQ3TLX8&pp=ygUMQ29jbyB0cmFpbGVy",
             "IsFeatured": "false",
             "releaseYear":2017,
-            "promoType":"Home Theatre"
+            "promoType":"Home Theatre",
+            "totalRatings": 591
         },
         {
             "id":35,
@@ -626,7 +660,8 @@
             "releaseDate": "2016-12-16",
             "TrailerUrl": "https://www.youtube.com/watch?v=0pdqf4P9MB8&pp=ygUQbGFsYWxhbmQgdHJhaWxlcg%3D%3D",
             "IsFeatured": "true",
-            "releaseYear":2016
+            "releaseYear":2016,
+            "totalRatings": 608
         },
         {
             "id":36,
@@ -643,7 +678,8 @@
             "releaseDate": "2016-10-10",
             "TrailerUrl": "https://www.youtube.com/watch?v=9NJj12tJzqc&pp=ygURbW9vbmxpZ2h0IHRyYWlsZXI%3D",
             "IsFeatured": "true",
-            "releaseYear":2016
+            "releaseYear":2016,
+            "totalRatings": 874
         },
         {
             "id":37,
@@ -660,7 +696,8 @@
             "releaseDate": "2016-11-02",
             "TrailerUrl": "https://www.youtube.com/watch?v=tFMo3UJ4B4g&pp=ygUPYXJyaXZhbCB0cmFpbGVy",
             "IsFeatured": "false",
-            "releaseYear":2016
+            "releaseYear":2016,
+            "totalRatings": 251
         },
         {
             "id": 38,
@@ -677,7 +714,8 @@
             "releaseDate": "2011-05-20",
             "TrailerUrl": "https://www.youtube.com/watch?v=KBiOF3y1W0Y&pp=ygUKZHJpdmUgMjAxMQ%3D%3D",
             "IsFeatured": "false",
-            "releaseYear":2011
+            "releaseYear":2011,
+            "totalRatings": 389
         },
         {
             "id": 39,
@@ -695,7 +733,8 @@
             "TrailerUrl": "https://www.youtube.com/watch?v=DqQe3OrsMKI&pp=ygUkVGhlIEdpcmwgd2l0aCB0aGUgRHJhZ29uIFRhdHRvbyAyMDEx",
             "IsFeatured": "false",
             "releaseYear":2011,
-            "promoType" : "Early Access"
+            "promoType" : "Early Access",
+            "totalRatings": 902
         },
         {
             "id": 40,
@@ -713,7 +752,8 @@
             "TrailerUrl": "https://www.youtube.com/watch?v=I5kzcwcQA1Q&pp=ygUQVGhlIFdhcnJpb3IgMjAxMQ%3D%3D",
             "IsFeatured": "false",
             "releaseYear":2011,
-            "promoType" : "Free with Ads"
+            "promoType" : "Free with Ads",
+            "totalRatings": 725
         },
         {
             "id": 41,
@@ -730,7 +770,8 @@
             "releaseDate": "2011-09-09",
             "TrailerUrl": "https://www.youtube.com/watch?v=-4QPVo0UIzc&pp=ygUOTW9uZXliYWxsIDIwMTE%3D",
             "IsFeatured": "false",
-            "releaseYear":2011
+            "releaseYear":2011,
+            "totalRatings": 385
         },
         {
             "id": 42,
@@ -740,14 +781,15 @@
             "genre": ["Drama"],
             "rentPrice": 3.99,
             "buyPrice": 14.99,
-            "posterImage": "https://m.media-amazon.com/images/I/81Bvkay5OgL._AC_SY679_.jpg",
+            "posterImage": "https://upload.wikimedia.org/wikipedia/en/d/d3/The_Help_%282011_film%29.jpg",
             "backgroundImage": "https://m.media-amazon.com/images/M/MV5BNDkzNTc3MTAzNF5BMl5BanBnXkFtZTcwNDE1ODU4NQ@@._V1_.jpg",
             "MPARating": "PG-13",
             "Length": 146,
             "releaseDate": "2011-07-30",
             "TrailerUrl": "https://www.youtube.com/watch?v=aT9eWGjLv6s&pp=ygUNVGhlIEhlbHAgMjAxMQ%3D%3D",
             "IsFeatured": "false",
-            "releaseYear":2011
+            "releaseYear":2011,
+            "totalRatings": 950
         },
         {
             "id": 43,
@@ -764,7 +806,8 @@
             "releaseDate": "2011-05-15",
             "TrailerUrl": "https://www.youtube.com/watch?v=YB9Oq0hn5KY&pp=ygUPVGhlIEFydGlzdCAyMDEx",
             "IsFeatured": "false",
-            "releaseYear":2011
+            "releaseYear":2011,
+            "totalRatings": 224
         },
         {
             "id": 44,
@@ -781,7 +824,8 @@
             "releaseDate": "2011-05-11",
             "TrailerUrl": "https://www.youtube.com/watch?v=FAfR8omt-CY&pp=ygUeTWlkbmlnaHQgaW4gUGFyaXMgdHJhaWxlciAyMDEx",
             "IsFeatured": "false",
-            "releaseYear":2011
+            "releaseYear":2011,
+            "totalRatings": 234
         },
         {
             "id": 45,
@@ -798,7 +842,8 @@
             "releaseDate": "2011-10-10",
             "TrailerUrl": "https://www.youtube.com/watch?v=Hv3obL9HqyY&pp=ygURSHVnbyB0cmFpbGVyIDIwMTE%3D",
             "IsFeatured": "false",
-            "releaseYear":2011
+            "releaseYear":2011,
+            "totalRatings": 672
         },
         {
             "id": 46,
@@ -816,7 +861,8 @@
             "TrailerUrl": "https://www.youtube.com/watch?v=DDgoDooApwM&pp=ygUSUmFuZ28gdHJhaWxlciAyMDEx",
             "IsFeatured": "false",
             "releaseYear":2011,
-            "promoType" : "Free with Ads"
+            "promoType" : "Free with Ads",
+            "totalRatings": 832
         },
         {
             "id": 47,
@@ -834,7 +880,8 @@
             "TrailerUrl": "https://www.youtube.com/watch?v=XDwUH02DDWU&pp=ygUbVGhlIERlc2NlbmRhbnQgdHJhaWxlciAyMDEx",
             "IsFeatured": "false",
             "releaseYear":2011,
-            "promoType" : "Early Access"
+            "promoType" : "Early Access",
+            "totalRatings": 288
         }
 
     ],
@@ -857,7 +904,8 @@
             "IsFeatured": "true",
             "promoType" : "Free with Ads",
             "addedOn": "2021-12-21",
-            "releaseYear":2021
+            "releaseYear":2021,
+            "totalRatings": 873
         },
          {
             "id": 2,
@@ -877,7 +925,8 @@
             "IsFeatured": "false",
             "promoType": "None",
             "addedOn": "2020-03-05",
-            "releaseYear":2016
+            "releaseYear":2016,
+            "totalRatings": 348
         },
         {
             "id": 3,
@@ -897,7 +946,8 @@
             "IsFeatured": "true",
             "promoType":"Home Theatre",
             "addedOn": "2020-02-28",
-            "releaseYear":2008
+            "releaseYear":2008,
+            "totalRatings": 638
         },
         {
             "id": 4,
@@ -917,7 +967,8 @@
             "IsFeatured": "true",
             "promoType": "None",
             "addedOn": "2020-04-12",
-            "releaseYear":2016
+            "releaseYear":2016,
+            "totalRatings": 934
         },
         {
             "id": 5,
@@ -937,7 +988,8 @@
             "IsFeatured": "false",
             "promoType": "None",
             "addedOn": "2020-02-10",
-            "releaseYear":2019
+            "releaseYear":2019,
+            "totalRatings": 418
         },
         {
             "id": 6,
@@ -957,7 +1009,8 @@
             "IsFeatured": "false",
             "promoType": "None",
             "addedOn": "2020-05-10",
-            "releaseYear":1994
+            "releaseYear":1994,
+            "totalRatings": 359
         },
         {
             "id": 7,
@@ -977,7 +1030,8 @@
             "IsFeatured": "false",
             "promoType": "None",
             "addedOn": "2020-02-25",
-            "releaseYear":2013
+            "releaseYear":2013,
+            "totalRatings": 348
         },
         {
             "id": 8,
@@ -997,7 +1051,8 @@
             "IsFeatured": "true",
             "promoType" : "Free with Ads",
             "addedOn": "2020-05-01",
-            "releaseYear":2005
+            "releaseYear":2005,
+            "totalRatings": 479
         },
         {
             "id": 9,
@@ -1017,7 +1072,8 @@
             "IsFeatured": "false",
             "promoType": "None",
             "addedOn": "2020-04-20",
-            "releaseYear":1999
+            "releaseYear":1999,
+            "totalRatings": 346
         },
         {
             "id": 10,
@@ -1037,7 +1093,8 @@
             "IsFeatured": "false",
             "promoType":"Home Theatre",
             "addedOn": "2020-03-15",
-            "releaseYear":2011
+            "releaseYear":2011,
+            "totalRatings": 359
         },
         {
             "id": 11,
@@ -1057,7 +1114,8 @@
             "IsFeatured": "false",
             "promoType" : "Free with Ads",
             "addedOn": "2020-04-02",
-            "releaseYear":1989
+            "releaseYear":1989,
+            "totalRatings": 852
         },
         {
             "id": 12,
@@ -1077,7 +1135,8 @@
             "IsFeatured": "true",
             "promoType": "None",
             "addedOn": "2020-01-25",
-            "releaseYear":2010
+            "releaseYear":2010,
+            "totalRatings": 159
         },
         {
             "id": 13,
@@ -1097,7 +1156,8 @@
             "IsFeatured": "false",
             "promoType": "None",
             "addedOn": "2020-05-15",
-            "releaseYear":2019
+            "releaseYear":2019,
+            "totalRatings": 230
         },
         {
             "id": 14,
@@ -1110,14 +1170,15 @@
             "rentPrice": 13.99,
             "buyPrice": 29.99,
             "posterImage": "https://i.ebayimg.com/images/g/obsAAOSwDbJhuThL/s-l1600.jpg",
-            "backgroundImage": "https://m.media-amazon.com/images/S/pv-target-images/02a27913b67c6671e4830e4eec88720199cb07cba4b182919234273143834b2b.jpg",
+            "backgroundImage": "https://variety.com/wp-content/uploads/2013/12/the-walking-dead-ratings.jpg?w=1000",
             "MPARating": "TV-MA",
             "releaseDate": "2010-10-31",
             "TrailerUrl": "https://www.youtube.com/watch?v=sfAc2U20uyg&pp=ygUiIFRoZSBXYWxraW5nIERlYWQgdHJhaWxlciBzZWFzb24gMQ%3D%3D",
             "IsFeatured": "false",
             "promoType": "None",
             "addedOn": "2020-01-30",
-            "releaseYear":2010
+            "releaseYear":2010,
+            "totalRatings": 283
         },
         {
             "id": 15,
@@ -1130,14 +1191,15 @@
             "rentPrice": 14.99,
             "buyPrice": 29.99,
             "posterImage": "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/fd5f890d-01d0-419d-b7d2-a31600317757.jpg",
-            "backgroundImage": "hhttps://images.tbs.com/tbs/$dyna_params/https%3A%2F%2Fi.cdn.tbs.com%2Fassets%2Fimages%2F2017%2F04%2Fbbt-s1e0-1600x900-1600x900_071420140149.jpg",
+            "backgroundImage": "https://www.hindustantimes.com/ht-img/img/2023/08/20/1600x900/3e8e7-16924907435140-1920_1692539328427_1692539345313.webp",
             "MPARating": "TV-PG",
             "releaseDate": "2007-09-24",
             "TrailerUrl": "https://www.youtube.com/watch?v=WBb3fojgW0Q&pp=ygUldGhlIGJpZyBiYW5nIHRoZW9yeSB0cmFpbGVyIHNlYXNvbiAxIA%3D%3D",
             "IsFeatured": "false",
             "promoType" : "Free with Ads",
             "addedOn": "2020-05-18",
-            "releaseYear":2007
+            "releaseYear":2007,
+            "totalRatings": 271
         },
         {
             "id": 16,
@@ -1157,7 +1219,8 @@
             "IsFeatured": "false",
             "promoType": "None",
             "addedOn": "2020-03-02",
-            "releaseYear":1963
+            "releaseYear":1963,
+            "totalRatings": 374
         },
         {
             "id": 17,
@@ -1177,7 +1240,8 @@
             "IsFeatured": "true",
             "promoType": "None",
             "addedOn": "2020-05-15",
-            "releaseYear":2020
+            "releaseYear":2020,
+            "totalRatings": 148
         },
         {
             "id": 18,
@@ -1190,14 +1254,15 @@
             "rentPrice": 12.99,
             "buyPrice": 29.99,
             "posterImage": "https://www.tvguide.com/a/img/catalog/provider/1/1/1-7419472521.jpg",
-            "backgroundImage": "https://static.wikia.nocookie.net/black-mirror/images/3/38/Blackmirror.jpg/revision/latest?cb=20160414093416",
+            "backgroundImage": "https://dnm.nflximg.net/api/v6/2DuQlx0fM4wd1nzqm5BFBi6ILa8/AAAAQZDNtVuNlnd7nBr7a4OjXYBQpN_nhPVVsY9a9SXXDdTLR92TvViQh0sZkxWE-7DbxZd9-BjWDj-c8nIj3NtK84WrtPaIjEKowFMu74KrZD2QgyXn64lVK2D5p9pXiu2d566ZwK1ow9TEanNpH2ms5L0Q.jpg?r=9d3",
             "MPARating": "TV-MA",
             "releaseDate": "2011-12-04",
             "TrailerUrl": "https://www.youtube.com/watch?v=di6emt8_ie8&pp=ygUdYmxhY2sgbWlycm9yIHRyYWlsZXIgc2Vhc29uIDE%3D",
             "IsFeatured": "false",
             "promoType": "None",
             "addedOn": "2020-02-15",
-            "releaseYear":2011
+            "releaseYear":2011,
+            "totalRatings": 937
             
         },
         {
@@ -1218,7 +1283,8 @@
             "IsFeatured": "false",
             "promoType":"Home Theatre",
             "addedOn": "2020-03-20",
-            "releaseYear":2015
+            "releaseYear":2015,
+            "totalRatings": 275
         },
         {
             "id": 21,
@@ -1238,7 +1304,8 @@
             "IsFeatured": "false",
             "promoType": "None",
             "addedOn": "2020-07-18",
-            "releaseYear":2018
+            "releaseYear":2018,
+            "totalRatings": 274
         },
         {
             "id": 22,
@@ -1258,7 +1325,8 @@
             "IsFeatured": "true",
             "promoType": "None",
             "addedOn": "2020-11-02",
-            "releaseYear":2020
+            "releaseYear":2020,
+            "totalRatings": 346
         },
         {
             "id": 23,
@@ -1278,7 +1346,8 @@
             "IsFeatured": "false",
             "promoType" : "Early Access",
             "addedOn": "2020-03-18",
-            "releaseYear":2020
+            "releaseYear":2020,
+            "totalRatings": 346
         },
         {
             "id": 24,
@@ -1290,7 +1359,7 @@
             "genre": ["Drama", "Sci-Fi", "Thriller"],
             "rentPrice": 13.99,
             "buyPrice": 29.99,
-            "posterImage": "https://static.wikia.nocookie.net/the-handmaids-tale/images/6/6d/Handmaids_Tale_Season_1.jpg/revision/latest?cb=20200915154645",
+            "posterImage": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQKGqz26htqZYDjDEveTNnxH2Vj9VlX0HDu7hC8eVRraPj0x_ZM",
             "backgroundImage": "https://m.media-amazon.com/images/S/pv-target-images/40c89f956667dbd0de51755a8fd63ad13819921db89f9a7b9cdef3aa7e1597ba.jpg",
             "MPARating": "TV-MA",
             "releaseDate": "2017-04-26",
@@ -1298,7 +1367,8 @@
             "IsFeatured": "false",
             "promoType": "None",
             "addedOn": "2017-04-26",
-            "releaseYear":2017
+            "releaseYear":2017,
+            "totalRatings": 347
         },
         {
             "id": 25,
@@ -1310,7 +1380,7 @@
             "genre": ["Crime", "Drama", "Mystery"],
             "rentPrice": 12.99,
             "buyPrice": 24.99,
-            "posterImage": "https://static.wikia.nocookie.net/dark-netflix/images/a/a8/Dark_US_Poster.jpg/revision/latest?cb=20171113104852",
+            "posterImage": "https://upload.wikimedia.org/wikipedia/en/d/da/DarkNetflixPosterEnglish.jpg",
             "backgroundImage": "https://www.enjpg.com/img/2020/Dark-Netflix.png",
             "MPARating": "TV-MA",
             "releaseDate": "2017-12-01",
@@ -1318,7 +1388,8 @@
             "IsFeatured": "false",
             "promoType": "None",
             "addedOn": "2020-04-28",
-            "releaseYear":2020
+            "releaseYear":2020,
+            "totalRatings": 372
         },
         {
             "id": 26,
@@ -1338,7 +1409,8 @@
             "IsFeatured": "false",
             "promoType": "None",
             "addedOn": "2020-05-20",
-            "releaseYear":2019
+            "releaseYear":2019,
+            "totalRatings": 347
         },
         {
             "id": 27,
@@ -1358,7 +1430,8 @@
             "IsFeatured": "false",
             "promoType" : "Free with Ads",
             "addedOn": "2020-06-10",
-            "releaseYear":2016
+            "releaseYear":2016,
+            "totalRatings": 357
         },
         {
             "id": 28,
@@ -1370,7 +1443,7 @@
             "genre": ["Drama", "Mystery", "Sci-Fi"],
             "rentPrice": 14.99,
             "buyPrice": 29.99,
-            "posterImage": "https://static.wikia.nocookie.net/expanse/images/c/c2/TheExpanse-S1_poster-Syfy.jpg/revision/latest?cb=20151025195508",
+            "posterImage": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTPPpgluVX-xVsVNoc-B-dSse5MASPdjEWZd5IKWyCUWMQQ-p5K",
             "backgroundImage": "https://i0.wp.com/www.syfy.com/sites/syfy/files/TheExpanse_recap_108.jpg",
             "MPARating": "TV-14",
             "releaseDate": "2015-12-14",
@@ -1378,7 +1451,8 @@
             "IsFeatured": "false",
             "promoType" : "Early Access",
             "addedOn": "2020-03-30",
-            "releaseYear":2015
+            "releaseYear":2015,
+            "totalRatings": 346
         },
         {
             "id": 29,
@@ -1398,7 +1472,8 @@
             "IsFeatured": "false",
             "promoType":"Home Theatre",
             "addedOn": "2020-05-25",
-            "releaseYear":2014
+            "releaseYear":2014,
+            "totalRatings": 346
         },
         {
             "id": 30,
@@ -1418,7 +1493,8 @@
             "IsFeatured": "false",
             "promoType": "None",
             "addedOn": "2020-06-05",
-            "releaseYear":2017
+            "releaseYear":2017,
+            "totalRatings": 346
         }
 
     ]

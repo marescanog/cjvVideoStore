@@ -38,19 +38,19 @@
 }
 
 .details-info-container{
-    background-color: blue;
+    /* background-color: blue; */
     width: 80%;
     display: flex;
     flex-direction: row;
 }
 
 .details-info-left {
-    background-color: brown;
+    max-width: 16em;
 }
 
 .details-info-right {
     flex: 1;
-    background-color: darkblue;
+    /* background-color: darkblue; */
     margin-left: 20px;
 }
 
@@ -67,6 +67,10 @@
 .buttons-section{
     display: flex;
     flex-direction: row;
+}
+
+.details-buttons-info{
+    flex: 1 !important;
 }
 
 
