@@ -12,9 +12,8 @@ const Home = () => {
   const [featured2021Movies, seFeatured2021Movies] = useState([]);
   const [featured2021TV, seFeatured2021TV] = useState([]);
 
-  const filter2021Featured = () => {
 
-  }
+
   useEffect(() => {
     fetch('http://localhost:8000/movies?mostDemanded=true&releaseYear=2021')
     .then((res) => {
@@ -53,7 +52,7 @@ const Home = () => {
           <div className="home_space_featured">
             <Featured  title={'Featured TV Shows'} featuredList={featured2021TV} type="shows"/>
           </div>
-          <div className="home_space_featured">
+          <div className="ad-space-featured">
             <Content /> 
           </div>
 

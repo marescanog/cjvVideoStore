@@ -40,17 +40,63 @@ const Details = () => {
     });
   }
 
-  const verifyIfUserLoggedIn = () => {
-    return new Promise((res)=>{
-      res(cookies.hasOwnProperty('jwt') && cookies['jwt'] != null);
+  const verifyIfUserLoggedIn = ({id, type}) => {
+    try{
+      const newObj = {
+        isLoggedIn: cookies.hasOwnProperty('jwt') && cookies['jwt'] != null,
+        id: id,
+        type: type
+      }
+      return new Promise((resolve)=>{
+        resolve(newObj);
+      })
+    } catch (err){
+      return new Promise((reject)=>{
+        reject({message: err});
+      })
+    }
+
+  }
+
+  const checkIfItIsInList = async ({id, type, listType, action="addList"}) => {
+    const isInList = await fetch(`http://localhost:8000/${listType}?userId=${cookies['id']}&type=${type}&itemID=${id}`)
+    .then((res) => {
+      if(res.status == 200){
+        return res.json();
+      }
+    })
+    .then((res2)=>{
+      return res2[0];
+    })
+
+    return new Promise((res, rej)=>{
+      if(isInList){
+        switch(action){
+          case "addList":
+            rej({errType:"Already in List"});
+            break;
+          case "redeem":
+            res(true)
+            break;
+        }
+      } else {
+        switch(action){
+          case "addList":
+            res(true)
+            break;
+          case "redeem":
+            rej({errType:"Not in List"});
+            break;
+        }
+      }
     })
   }
 
   const addToWatchList = ({id, type}) => {
-    verifyIfUserLoggedIn()
+    verifyIfUserLoggedIn({id, type})
     .then(res=>{
-      if(res == true){
-
+      if(res?.isLoggedIn == true){
+        return({id:id, type:type, listType:'usersList'})
       } else {
         Swal.fire({
           icon: "info",
@@ -59,10 +105,66 @@ const Details = () => {
           footer: '<a href="/login" style="color:blue">Sign in to your account</a>'
         });
       }
-    });
+    })
+    .then(checkIfItIsInList)
+    .then(res=>{
+      console.log(res)
+    }).catch(err=>{
+      if(err?.errType === "Already in List"){
+        Swal.fire({
+          icon: "info",
+          title: "Already in List",
+          text: "This item is already in your list."
+        });
+      }
+    })
   }
 
   const redeemItem = ({id, type}) => {
+    verifyIfUserLoggedIn({id, type})
+    .then(res=>{
+      if(res?.isLoggedIn == true){
+        return({id:id, type:type, listType:'usersList'})
+      } else {
+        Swal.fire({
+          icon: "info",
+          title: "Please Login",
+          text: "Please login to your account to add to your list.",
+          footer: '<a href="/login" style="color:blue">Sign in to your account</a>'
+        });
+      }
+    })
+    .then(async(res)=>{
+      return await checkIfItIsInList({id:id, type:type, listType:'usersBought', action:"redeem"})
+    })
+    .then(res=>{
+      console.log(res)
+    }).catch(err=>{
+      if(err?.errType === "Already in List"){
+        Swal.fire({
+          icon: "info",
+          title: "Already in List",
+          text: "This item is already in your list."
+        });
+      }
+
+      if(err?.errType === "Not in List"){
+        Swal.fire({
+          icon: "info",
+          title: "Not in List",
+          text: "Please purchase or rent item before redeeming it."
+        });
+      }
+    })
+  }
+
+  // {
+  //   "userId":"ac1f",
+  //   "type":"movies",
+  //   "itemID": 1
+  // }
+
+  const buyItem = ({id, type}) => {
     verifyIfUserLoggedIn()
     .then(res=>{
       if(res == true){
@@ -78,6 +180,21 @@ const Details = () => {
     });
   }
 
+  const rentItem = ({id, type}) => {
+    verifyIfUserLoggedIn()
+    .then(res=>{
+      if(res == true){
+
+      } else {
+        Swal.fire({
+          icon: "info",
+          title: "Please Login",
+          text: "Please login to your account to add to your list.",
+          footer: '<a href="/login" style="color:blue">Sign in to your account</a>'
+        });
+      }
+    });
+  }
   return (
     <div className="mainContainer">
         <div>
@@ -86,7 +203,7 @@ const Details = () => {
         <div className='details-image-banner'>
           <div className='details-info-bg-section'>
             <Header title={'Details'}/>
-            <div className="details-info-container universal_container">
+            <div className="details-info-container universal_container_details">
               <div className='details-info-left'>
                 <Image src={details?.posterImage} fluid className='details-poster-img'/>
               </div>
@@ -159,8 +276,14 @@ const Details = () => {
                 
 
                 <div className='details-rent-buy-section'>
-                  <Button variant="info" className='details-rentBuy-button'>Rent       {JSON.stringify(details?.rentPrice)}</Button>
-                  <Button variant="info" className='details-rentBuy-button' >Buy       {JSON.stringify(details?.buyPrice)}</Button>
+                  <Button variant="info" className='details-rentBuy-button' 
+                   onClick={()=>{
+                    buyItem({id: details?.id, type:type});
+                  }}>Rent       {JSON.stringify(details?.rentPrice)}</Button>
+                  <Button variant="info" className='details-rentBuy-button' 
+                   onClick={()=>{
+                    rentItem({id: details?.id, type:type});
+                  }}>Buy       {JSON.stringify(details?.buyPrice)}</Button>
                 </div>
               </div>
             </div>

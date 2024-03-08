@@ -163,6 +163,12 @@
     font-weight: 700;
 }
 
+.universal_container_details{
+    margin-left: 3em;
+    margin-right: 3em;
+    margin-top: 0.5em;
+}
+
 /* On screens that are 992px or less, set the background color to blue */
 @media screen and (max-width: 992px) {
     .details-info-bg-section{
@@ -187,7 +193,7 @@
         height: 30vh;
     }
 
-    .universal_container{
+    .universal_container_details{
         margin: 0;
         padding: 0;
     }
