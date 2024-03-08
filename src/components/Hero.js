@@ -20,7 +20,7 @@ const Hero = ({list}) => {
                   <div className="carousel_caption_container">
                     <h2 className="title_text_style">{el.title}</h2>
                     <p className="hide_small description_text_style">{el.description}</p>
-                    <Button variant="primary" className='button_hero' as={Link} to={'/details/'+el.id}>WATCH NOW</Button>
+                    <Button variant="primary" className='button_hero' as={Link} to={'/details/movies/'+el.id}>WATCH NOW</Button>
                   </div>
                 </Carousel.Caption>
               </Carousel.Item>

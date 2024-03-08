@@ -3,7 +3,7 @@ import ItemTile from './ItemTile';
 import '../styles/components/Featured.css';
 
 
-const Featured = ({title, featuredList}) => {
+const Featured = ({title, featuredList, type}) => {
   return (
     <div className="universal_container">
       <div className="featured_container">
@@ -11,7 +11,7 @@ const Featured = ({title, featuredList}) => {
         {featuredList && Array.isArray(featuredList) && featuredList.length > 0 ?
           <div className="featured_card_container">
             {featuredList.map((el, indx)=>{
-              return <ItemTile key={title+indx} title={title} el={el} indx={indx}/>
+              return <ItemTile key={title+indx} title={title} el={el} indx={indx} type={type??'movies'}/>
             })}
           </div>
           :

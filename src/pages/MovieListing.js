@@ -112,6 +112,13 @@ const MovieListing = ({watchType}) => {
     .then((res) => {
       return res.json(res);
     })
+    // .then((data)=>{
+    //   if(){
+
+    //   } else {
+    //     return data;
+    //   } 
+    // })
     .then((data) => {
       if(genre == ''){
         return data;
@@ -205,7 +212,7 @@ const MovieListing = ({watchType}) => {
               </ButtonGroup>
             </div>
 
-            <Listing list={movieData} title={"movies"}/>
+            <Listing list={movieData} title={"movies"} type={"movies"}/>
         </div>
         <Footer/>  
     </div>

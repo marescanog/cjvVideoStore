@@ -3,9 +3,9 @@ import Card from 'react-bootstrap/Card';
 import Random from 'random-string-alphanumeric-generator';
 import { Link } from 'react-router-dom';
 
-const ItemTile = ({title, append, el, indx}) => {
+const ItemTile = ({title, append, el, indx, type}) => {
   return (
-    <Card key={(title??"")+Random.randomAlphanumeric(6, "lowercase")+indx} className={`featured_card_style${append??""}`} as={Link} to={'/details/'+el.id}>
+    <Card key={(title??"")+Random.randomAlphanumeric(6, "lowercase")+indx} className={`featured_card_style${append??""}`} as={Link} to={'/details/'+(type??'movies')+'/'+el.id}>
         <div className={`featured_overlay${append??""}`}>
             <h3>{el.title}</h3>
             <p>{el.description}</p>

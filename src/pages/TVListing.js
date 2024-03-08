@@ -205,7 +205,7 @@ const TVListing = ({watchType}) => {
               </ButtonGroup>
             </div>
 
-            <Listing list={tvShowData} title={"tv"}/>
+            <Listing list={tvShowData} title={"tv"} type={"shows"}/>
         </div>
         <Footer/>  
     </div>

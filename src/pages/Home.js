@@ -16,7 +16,7 @@ const Home = () => {
 
   }
   useEffect(() => {
-    fetch('http://localhost:8000/movies?mostDemanded=true')
+    fetch('http://localhost:8000/movies?mostDemanded=true&releaseYear=2021')
     .then((res) => {
       return res.json();
     })
@@ -49,9 +49,9 @@ const Home = () => {
         <div className='homeContainer'>
           <Header title={'Start Your Ultimate Binge Journey Today!'} />
           <Hero list={heroData}/>
-          <Featured title={'Featured Films'} featuredList={featured2021Movies} />
+          <Featured title={'Featured Films'} featuredList={featured2021Movies} type="movies"/>
           <div className="home_space_featured">
-            <Featured  title={'Featured TV Shows'} featuredList={featured2021TV} />
+            <Featured  title={'Featured TV Shows'} featuredList={featured2021TV} type="shows"/>
           </div>
           <div className="home_space_featured">
             <Content /> 
