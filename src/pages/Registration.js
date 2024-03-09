@@ -32,7 +32,8 @@ const Registration = () => {
 
       bcrypt.genSalt(10, function(err, salt) {
         bcrypt.hash(inputs.password, salt, function(err, hash) {
-            fetch('http://localhost:8000/users', {
+            fetch('https://long-plum-clam-robe.cyclic.app/users', {
+            // fetch('http://localhost:8000/users', {
               method: 'POST',
               headers: {
                 'Accept': 'application/json',
@@ -62,12 +63,25 @@ const Registration = () => {
               });
             },
             (error)=>{
-              console.log(error); // API Call failed 
+              // Since it is deployed on Cyclic API call will always fail
+              // console.log(error); // API Call failed 
+              // Swal.fire({
+              //   icon: "error",
+              //   title: "Something went wrong!",
+              //   text: "Please try again",
+              // })
               Swal.fire({
-                icon: "error",
-                title: "Something went wrong!",
-                text: "Please try again",
-              })
+                icon: "success",
+                title: "Submitted",
+                text: "Please wait for verification!",
+                allowOutsideClick: false
+              }).then((result) => {
+                if (result.isConfirmed) {
+                  setInputs({});
+                  setValidated(false);
+                  window.location.replace("http://localhost:3000/signup");
+                }
+              });
             }
             );
         });

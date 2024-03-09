@@ -16,14 +16,20 @@ const Account = () => {
     const [rent, setRent] = useState([]);
     useEffect(()=>{
         if(cookies.hasOwnProperty('jwt') && cookies['jwt'] != null){
-            fetch(`http://localhost:8000/users?id=${cookies['id']}`)
+             
+            // DEPLOYED
+            fetch(`https://long-plum-clam-robe.cyclic.app/users?id=${cookies['id']}`)
+
+            // LOCAL
+            // fetch(`http://localhost:8000/users?id=${cookies['id']}`)
             .then((res) => {
               return res.json();
             })
             .then((data) => {
                 setUserData(data[0]);
 
-                fetch(`http://localhost:8000/usersList?id=${cookies['id']}`)
+                fetch(`https://long-plum-clam-robe.cyclic.app/usersList?id=${cookies['id']}`)
+                // fetch(`http://localhost:8000/usersList?id=${cookies['id']}`)
                 .then((res) => {
                   return res.json();
                 })
@@ -31,7 +37,8 @@ const Account = () => {
                     setList(data);
                 });
 
-                fetch(`http://localhost:8000/usersRent?id=${cookies['id']}`)
+                fetch(`https://long-plum-clam-robe.cyclic.app/usersRent?id=${cookies['id']}`)
+                // fetch(`http://localhost:8000/usersRent?id=${cookies['id']}`)
                 .then((res) => {
                   return res.json();
                 })
@@ -39,7 +46,8 @@ const Account = () => {
                     setBought(data);
                 });
 
-                fetch(`http://localhost:8000/usersBought?id=${cookies['id']}`)
+                fetch(`https://long-plum-clam-robe.cyclic.app/usersBought?id=${cookies['id']}`)
+                // fetch(`http://localhost:8000/usersBought?id=${cookies['id']}`)
                 .then((res) => {
                   return res.json();
                 })

@@ -15,7 +15,8 @@ const Home = () => {
 
 
   useEffect(() => {
-    fetch('http://localhost:8000/movies?mostDemanded=true&releaseYear=2021')
+    fetch('https://long-plum-clam-robe.cyclic.app/movies?mostDemanded=true&releaseYear=2021')
+    // fetch('http://localhost:8000/movies?mostDemanded=true&releaseYear=2021')
     .then((res) => {
       return res.json();
     })
@@ -23,7 +24,9 @@ const Home = () => {
       setHeroData(data);
     });
 
-    fetch('http://localhost:8000/movies?IsFeatured=true')
+    
+    fetch('https://long-plum-clam-robe.cyclic.app/movies?IsFeatured=true')
+    // fetch('http://localhost:8000/movies?IsFeatured=true')
       .then((res) => {
         return res.json();
       })
@@ -31,7 +34,9 @@ const Home = () => {
         seFeatured2021Movies(data);
       });
 
-    fetch('http://localhost:8000/shows?IsFeatured=true')
+      
+      fetch('https://long-plum-clam-robe.cyclic.app/shows?IsFeatured=true')
+    // fetch('http://localhost:8000/shows?IsFeatured=true')
       .then((res) => {
         return res.json();
       })

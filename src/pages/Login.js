@@ -40,7 +40,9 @@ const Login = () => {
 
       bcrypt.genSalt(10, function(err, salt) {
         bcrypt.hash("B4c0/\/", salt, function(err, hash) {
-            fetch(`http://localhost:8000/users?email=${inputs.email}`).then(res => res.json())
+            fetch(`https://long-plum-clam-robe.cyclic.app/users?email=${inputs.email}`)
+            // fetch(`http://localhost:8000/users?email=${inputs.email}`)
+            .then(res => res.json())
             .then((fetchRes) => {
               if(fetchRes.length > 0 && fetchRes[0].isVerified == true){
                 bcrypt.compare(inputs.password, fetchRes[0].password, function(err, res) {

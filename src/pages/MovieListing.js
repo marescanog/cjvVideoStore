@@ -108,7 +108,8 @@ const MovieListing = ({watchType}) => {
       }
     })
 
-    fetch(`http://localhost:8000/movies${arrQuery.length>0?(fetchApiQuery+append):""}`)
+    fetch(`https://long-plum-clam-robe.cyclic.app/movies${arrQuery.length>0?(fetchApiQuery+append):""}`)
+    // fetch(`http://localhost:8000/movies${arrQuery.length>0?(fetchApiQuery+append):""}`)
     .then((res) => {
       return res.json(res);
     })

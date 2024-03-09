@@ -16,7 +16,8 @@ const Details = () => {
   const [cookies] = useCookies(['jwt','id']);
 
   useEffect(()=>{
-    fetch(`http://localhost:8000/${type}?id=${id}`)
+    fetch(`https://long-plum-clam-robe.cyclic.app/${type}?id=${id}`)
+    // fetch(`http://localhost:8000/${type}?id=${id}`)
     .then((res) => {
       return res.json();
     })
@@ -59,7 +60,8 @@ const Details = () => {
   }
 
   const checkIfItIsInList = async ({id, type, listType, action="addList"}) => {
-    const isInList = await fetch(`http://localhost:8000/${listType}?userId=${cookies['id']}&type=${type}&itemID=${id}`)
+    const isInList = await fetch(`https://long-plum-clam-robe.cyclic.app/${listType}?userId=${cookies['id']}&type=${type}&itemID=${id}`)
+    // const isInList = await fetch(`http://localhost:8000/${listType}?userId=${cookies['id']}&type=${type}&itemID=${id}`)
     .then((res) => {
       if(res.status == 200){
         return res.json();
