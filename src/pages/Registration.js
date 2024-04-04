@@ -30,6 +30,55 @@ const Registration = () => {
       setValidated(true);
       event.preventDefault();
 
+    try{
+        // fetch('http://localhost:5000/register', { // dev
+
+        fetch('https://myspringbootapi-env.eba-sf9ddjd5.ca-central-1.elasticbeanstalk.com/register', { // prod
+        method: 'POST',
+        headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          firstname: inputs.firstname,
+          lastname: inputs.lastname,
+          email: inputs.email,
+          password: inputs.password,
+          confirmPassword:  inputs.confirmPassword,
+        })
+      }).then(res => {
+        if (res.status == 200) {
+          return res.json(); 
+        }
+        return res.json().then(err => Promise.reject(err));
+      })
+      .then(res=>{
+        Swal.fire({
+          icon: "success",
+          title: "Registration Successful!",
+          text: "You may now login",
+          allowOutsideClick: false
+        }).then((result) => {
+          if (result.isConfirmed) {
+            setInputs({});
+            setValidated(false);
+            window.location.replace("/login");
+          }
+        });
+      })
+      .catch(err=>{
+        console.log(err)
+          Swal.fire({
+            icon: "error",
+            title: "Registration not successful!",
+            text: JSON.stringify(err)??err.body??"something went wrong",
+          })
+      })
+    } catch (err) {
+      console.error('Error:', err.message);
+    }
+    
+
 
 
     //   bcrypt.genSalt(10, function(err, salt) {
@@ -160,10 +209,10 @@ const Registration = () => {
                   />
                 </Form.Group>
 
-                <Form.Group className="mb-3" controlId="formBasicPassword">
+                <Form.Group className="mb-3" controlId="formBasicConfirmPassword">
                   <Form.Label>Confirm Password</Form.Label>
                   <Form.Control type="password" placeholder="Confirm Password"  
-                      name="password" 
+                      name="confirmPassword" 
                       value={inputs.confirmPassword || ""} 
                       onChange={handleChange}
                       required

@@ -20,7 +20,7 @@ const Home = () => {
 
     try{
       // fetch('http://localhost:5000/mostDemanded?releaseYear=2021') // Java Server local
-      fetch('http://myspringbootapi-env.eba-sf9ddjd5.ca-central-1.elasticbeanstalk.com/mostDemanded?releaseYear=2021') // Java Server deployed
+      fetch('https://myspringbootapi-env.eba-sf9ddjd5.ca-central-1.elasticbeanstalk.com/mostDemanded?releaseYear=2021') // Java Server deployed
       .then((res) => {
         return res.json();
       })
@@ -37,8 +37,9 @@ const Home = () => {
     // fetch('https://long-plum-clam-robe.cyclic.app/movies?IsFeatured=true') // JSON Server old
     // fetch('http://localhost:8000/movies?IsFeatured=true')
     try{
-      // fetch('http://localhost:5000/mostDemanded?releaseYear=2021') // Java Server local
-      fetch('http://myspringbootapi-env.eba-sf9ddjd5.ca-central-1.elasticbeanstalk.com/movies?IsFeatured=true') // Java Server prod
+      console.log(process.env);
+      // fetch(`http://localhost:5000/mostDemanded?releaseYear=2021`) // Java Server local
+      fetch('https://myspringbootapi-env.eba-sf9ddjd5.ca-central-1.elasticbeanstalk.com/movies?IsFeatured=true') // Java Server prod
       .then((res) => {
         return res.json();
       })
@@ -56,7 +57,7 @@ const Home = () => {
 
     try{
       // fetch('http://localhost:5000/shows?IsFeatured=true') // Java Server local
-      fetch('http://myspringbootapi-env.eba-sf9ddjd5.ca-central-1.elasticbeanstalk.com/shows?IsFeatured=true') // Java Server prod
+      fetch('https://myspringbootapi-env.eba-sf9ddjd5.ca-central-1.elasticbeanstalk.com/shows?IsFeatured=true') // Java Server prod
       .then((res) => {
         return res.json();
       })

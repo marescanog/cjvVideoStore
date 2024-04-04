@@ -91,7 +91,7 @@ const MovieListing = ({watchType}) => {
     window.history.pushState({genre:filterValue, sort:radioValue, free:checkValue, name: searchTerm}, "", `/movies${newString}`);
     try{
       // fetch(`http://localhost:5000/movies${newString}`)
-      fetch(`http://myspringbootapi-env.eba-sf9ddjd5.ca-central-1.elasticbeanstalk.com/movies${newString}`)
+      fetch(`https://myspringbootapi-env.eba-sf9ddjd5.ca-central-1.elasticbeanstalk.com/movies${newString}`)
       .then(res => res.json())
       .then(data => {
         setMovieData(data);
@@ -106,7 +106,7 @@ const MovieListing = ({watchType}) => {
   useEffect(()=>{
     try{
       // fetch(`http://localhost:5000/movies${query}`)
-      fetch(`http://myspringbootapi-env.eba-sf9ddjd5.ca-central-1.elasticbeanstalk.com/movies${query}`)
+      fetch(`https://myspringbootapi-env.eba-sf9ddjd5.ca-central-1.elasticbeanstalk.com/movies${query}`)
       .then(res => res.json())
       .then(data => {
         setMovieData(data);
