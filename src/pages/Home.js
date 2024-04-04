@@ -15,34 +15,58 @@ const Home = () => {
 
 
   useEffect(() => {
-    fetch('https://long-plum-clam-robe.cyclic.app/movies?mostDemanded=true&releaseYear=2021')
+    // fetch('https://long-plum-clam-robe.cyclic.app/movies?mostDemanded=true&releaseYear=2021') // JSON Server old
     // fetch('http://localhost:8000/movies?mostDemanded=true&releaseYear=2021')
-    .then((res) => {
-      return res.json();
-    })
-    .then((data) => {
-      setHeroData(data);
-    });
+
+    try{
+      // fetch('http://localhost:5000/mostDemanded?releaseYear=2021') // Java Server local
+      fetch('http://myspringbootapi-env.eba-sf9ddjd5.ca-central-1.elasticbeanstalk.com/mostDemanded?releaseYear=2021') // Java Server deployed
+      .then((res) => {
+        return res.json();
+      })
+      .then((data) => {
+        setHeroData(data);
+      });
+    } catch (err) {
+      console.log(err);
+      setHeroData([]);
+    }
+
 
     
-    fetch('https://long-plum-clam-robe.cyclic.app/movies?IsFeatured=true')
+    // fetch('https://long-plum-clam-robe.cyclic.app/movies?IsFeatured=true') // JSON Server old
     // fetch('http://localhost:8000/movies?IsFeatured=true')
+    try{
+      // fetch('http://localhost:5000/mostDemanded?releaseYear=2021') // Java Server local
+      fetch('http://myspringbootapi-env.eba-sf9ddjd5.ca-central-1.elasticbeanstalk.com/movies?IsFeatured=true') // Java Server prod
       .then((res) => {
         return res.json();
       })
       .then((data) => {
         seFeatured2021Movies(data);
       });
+    } catch (err){
+      console.log(err);
+      seFeatured2021Movies([]);
+    }
 
       
-      fetch('https://long-plum-clam-robe.cyclic.app/shows?IsFeatured=true')
+      // fetch('https://long-plum-clam-robe.cyclic.app/shows?IsFeatured=true') // JSON Server old
     // fetch('http://localhost:8000/shows?IsFeatured=true')
+
+    try{
+      // fetch('http://localhost:5000/shows?IsFeatured=true') // Java Server local
+      fetch('http://myspringbootapi-env.eba-sf9ddjd5.ca-central-1.elasticbeanstalk.com/shows?IsFeatured=true') // Java Server prod
       .then((res) => {
         return res.json();
       })
       .then((data) => {
         seFeatured2021TV(data);
       });
+    }catch (err){
+      console.log(err);
+      seFeatured2021TV([]);
+    }
 
   }, []);
 
