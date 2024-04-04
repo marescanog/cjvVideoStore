@@ -6,7 +6,7 @@ import '../styles/Account.css';
 
 import { useCookies } from 'react-cookie';
 const Account = () => {
-    const [cookies] = useCookies(['jwt','id']);
+    const [cookies, setCookie] = useCookies(['xsrf','user']);
     const [userDate, setUserData] = useState({
         firstname: "Guest"
     })
@@ -15,7 +15,7 @@ const Account = () => {
     const [bought, setBought] = useState([]);
     const [rent, setRent] = useState([]);
     useEffect(()=>{
-        if(cookies.hasOwnProperty('jwt') && cookies['jwt'] != null){
+        if(cookies.hasOwnProperty('xsrf') && cookies['xsrf'] != null){
              
             // DEPLOYED
             fetch(`https://long-plum-clam-robe.cyclic.app/users?id=${cookies['id']}`)
@@ -60,7 +60,7 @@ const Account = () => {
 
             });
         } else {
-            window.location.replace("http://localhost:3000/home");
+            window.location.replace("/home");
         }
     },[]);
 
