@@ -1,8 +1,9 @@
-.listingContainer{
+.listingContainer {
     display: grid;
-    grid-template-columns: auto auto auto auto auto auto auto auto;
-    /* background-color: violet; */
+    grid-template-columns: repeat(8, 1fr); 
+    gap: 5px; /* Example gap */
 }
+
 .no_featured_top_card_2{
     display: none;
 }
@@ -123,12 +124,15 @@
         font-size: 1em;
     }
 
-    .listingContainer{
+
+    .listingContainer {
         display: grid;
-        grid-template-columns: auto auto auto auto auto auto auto;
+        grid-template-columns: repeat(7, 1fr); 
+        gap: 5px; 
         margin-top: 1.5em;
     }
 
+    
     .featured_card_style_2{
         min-width: 5em;
         min-height: 15em;
@@ -144,10 +148,10 @@
 
 /* On screens that are 992px or less, set the background color to blue */
 @media screen and (max-width: 992px) {
-    .listingContainer{
+    .listingContainer {
         display: grid;
-        grid-template-columns: auto auto auto auto;
-        /* background-color: red; */
+        grid-template-columns: repeat(4, 1fr); 
+        gap: 5px; /* Example gap */
     }
 
     .featured_card_style_2{
@@ -166,7 +170,7 @@
 @media screen and (max-width: 600px) {
     .listingContainer{
         display: grid;
-        grid-template-columns: auto auto;
+        grid-template-columns: repeat(2, 1fr); 
         justify-content: center;
         align-items: center;
         margin-top: 2em;

@@ -7,11 +7,11 @@ import '../styles/components/Navigation.css';
 import { useCookies } from 'react-cookie';
 
 const NavigationBar = () => {
-  const [cookies] = useCookies(['jwt']);
+  const [cookies] = useCookies(['xsrf']);
 
   useEffect(()=>{
 
-  },[cookies.hasOwnProperty('jwt')])
+  },[cookies.hasOwnProperty('xsrf')])
 
   return (
     <Navbar expand="lg" data-bs-theme="dark" className="navigation_container" sticky="top">
@@ -28,7 +28,7 @@ const NavigationBar = () => {
             <Nav.Link as={NavLink} to="/tv">TV</Nav.Link>
           </Nav>
           {
-            cookies.hasOwnProperty('jwt') && cookies['jwt'] != null ? 
+            cookies.hasOwnProperty('xsrf') && cookies['xsrf'] != null ? 
             <Nav className="justify-content-end">
               <Nav.Link as={NavLink} to="/account">My Account</Nav.Link>
               <Nav.Link as={NavLink} to="/logout">Logout</Nav.Link>

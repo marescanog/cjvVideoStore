@@ -5,19 +5,30 @@ import Header from '../components/Header';
 import '../styles/About.css';
 import { useCookies } from 'react-cookie';
 const Logout = () => {
-    const [cookies, setCookie] = useCookies(['jwt']);
-    function setJwt() {
-        setCookie('jwt', null);
+  const [cookies, setCookie] = useCookies(['xsrf','user']);
+
+    function setXSRF() {
+        setCookie('xsrf', null);
         return new Promise((res, rej)=>{
             res();
         })
     }
+
+    function setUser() {
+      setCookie('user', null);
+      return new Promise((res, rej)=>{
+          res();
+      })
+    }
+
     useEffect(()=>{
-        setJwt()
+        setXSRF()
+        setUser()
         .then(()=>{
-            window.location.replace("http://localhost:3000/home");
+            window.location.replace("/home");
         })
     },[])
+    
   return (
     <div className="mainContainer">
         <div>

@@ -13,19 +13,35 @@ import '../styles/Details.css';
 const Details = () => {
   const [details, setDetails] = useState({})
   let { id, type } = useParams();
-  const [cookies] = useCookies(['jwt','id']);
+  const [cookies] = useCookies(['xsrf','user']);
 
   useEffect(()=>{
-    fetch(`https://long-plum-clam-robe.cyclic.app/${type}?id=${id}`)
-    // fetch(`http://localhost:8000/${type}?id=${id}`)
-    .then((res) => {
-      return res.json();
-    })
-    .then((data) => {
-      setDetails(data[0]);
-    });
+
+    try{
+      fetch(`https://videostoreapi.torontohotelcalifornia.net/${type=="movies"?"movie":"tvshow"}/${id}`) // prod
+
+      // fetch(`http://localhost:5000/${type=="movies"?"movie":"tvshow"}/${id}`) // local
+      // fetch(`http://localhost:8000/${type}?id=${id}`)
+      .then((res) => {
+        return res.json();
+      })
+      .then((data) => {
+        setDetails(data);
+      });
+    } catch (err){
+      console.log(err)
+    }
+
 
   },[]);
+
+  const featureComingSoon = () => {
+    Swal.fire({
+      title: "Feature Coming Soon!",
+      text: "This Feature is coming soon!",
+      icon: "info"
+    });
+  }
 
   const openTrailerModal = (url) => {
     Swal.fire({
@@ -44,7 +60,7 @@ const Details = () => {
   const verifyIfUserLoggedIn = ({id, type}) => {
     try{
       const newObj = {
-        isLoggedIn: cookies.hasOwnProperty('jwt') && cookies['jwt'] != null,
+        isLoggedIn: cookies.hasOwnProperty('xsrf') && cookies['xsrf'] != null,
         id: id,
         type: type
       }
@@ -197,6 +213,7 @@ const Details = () => {
       }
     });
   }
+
   return (
     <div className="mainContainer">
         <div>
@@ -204,96 +221,109 @@ const Details = () => {
         </div>
         <div className='details-image-banner'>
           <div className='details-info-bg-section'>
-            <Header title={'Details'}/>
+            <Header title={details.message != null ? '404: Not Found' :'Details'}/>
             <div className="details-info-container universal_container_details">
-              <div className='details-info-left'>
-                <Image src={details?.posterImage} fluid className='details-poster-img'/>
-              </div>
-              <div className='details-info-right'>
-                <h2>{details?.title}</h2>
+              {details.message != null ? <>
+                <h3>{details.message}</h3>  
+              </> : <>
+                <div className='details-info-left'>
+                  <Image src={details?.posterImage} fluid className='details-poster-img'/>
+                </div>
+                <div className='details-info-right'>
+                  <h2>{details?.title}</h2>
+       
+                  <div className='genre-rating-section'>
+                    {
+                      details?.genre && details?.genre.length > 0 ? (
+                        details?.genre.map((el,index, arr)=>{
+                          return <p key={`${index}${JSON.stringify(el)}`} className="genre-text-style">{el} {index!=arr.length-1?"|":""}</p>
+                        })
+                      )
+                      : <></>
+                    }
+                    <p className="genre-text-style">| {details?.releaseYear}</p>
+       
+                    {details?.MPARating &&
+                      <div className="mrating-box-style">
+                        <p className="mrating-text-style">{details?.mparating}</p>
+                      </div>
+                    }
 
-                <div className='genre-rating-section'>
-                  {
-                    details?.genre && details?.genre.length > 0 ? (
-                      details?.genre.map((el,index, arr)=>{
-                        return <p key={`${index}${JSON.stringify(el)}`} className="genre-text-style">{el} {index!=arr.length-1?"|":""}</p>
-                      })
-                    )
-                    : <></>
-                  }
-                  <p className="genre-text-style">| {details?.releaseYear}</p>
-
-                  <div className="mrating-box-style">
-                    <p className="mrating-text-style">{details?.MPARating}</p>
+                    { details?.Length && 
+                      <div className="mrating-box-style">
+                        <p className="mrating-text-style">{`${details?.Length} min`}</p>
+                      </div>
+                    }
+                    { details?.numOfSeasons && 
+                      <div className="mrating-box-style">
+                        <p className="mrating-text-style">S1-S{details?.numOfSeasons}</p>
+                      </div>
+                    }
+                    { details?.numOfTotalEpisodes && 
+                      <div className="mrating-box-style">
+                        <p className="mrating-text-style">Ep1-Ep{details?.numOfTotalEpisodes}</p>
+                      </div>
+                    }
                   </div>
-                  { details?.Length && 
-                    <div className="mrating-box-style">
-                      <p className="mrating-text-style">{`${details?.Length} min`}</p>
-                    </div>
-                  }
-                  { details?.numOfSeasons && 
-                    <div className="mrating-box-style">
-                      <p className="mrating-text-style">S1-S{details?.numOfSeasons}</p>
-                    </div>
-                  }
-                  { details?.numOfTotalEpisodes && 
-                    <div className="mrating-box-style">
-                      <p className="mrating-text-style">Ep1-Ep{details?.numOfTotalEpisodes}</p>
-                    </div>
-                  }
-                </div>
 
-                <div className='rating-section'>
-                  <div className='rating-component-container'>
-                    <Rating onClick={()=>{}}
-                      initialValue={Math.floor((details?.rating)/2??0)}
-                      iconsCount={5}
-                      disableFillHover={true}
-                      SVGclassName={'rating-svg'}
-                    />
+                  <div className='rating-section'>
+                    <div className='rating-component-container'>
+                      <Rating onClick={()=>{}}
+                        initialValue={Math.floor((details?.rating)/2??0)}
+                        iconsCount={5}
+                        disableFillHover={true}
+                        SVGclassName={'rating-svg'}
+                      />
+                    </div>
+                    <div className='rating-text-container'><p className='rating-text-style'>({details?.totalRatings})</p></div>
+
                   </div>
-                  <div className='rating-text-container'><p className='rating-text-style'>({details?.totalRatings})</p></div>
 
-                </div>
+                  <div className='buttons-section'>
+                    <Button variant="outline-info" className='details-buttons-info'
+                    onClick={()=>{
+                      console.log(details)
+                      openTrailerModal(details?.trailerUrl);
+                    }}>Trailer</Button>
+                    <Button variant="outline-info" className='details-buttons-info mr-3 ml-3'
+                    onClick={()=>{
+                      featureComingSoon();
+                      // addToWatchList({id: details?.id, type:type});
+                    }}>List</Button>
+                    <Button variant="outline-info" className='details-buttons-info' onClick={()=>{
+                      featureComingSoon();
+                      // redeemItem({id: details?.id, type:type});
+                    }}>Redeem</Button>
+                  </div>
 
-                <div className='buttons-section'>
-                  <Button variant="outline-info" className='details-buttons-info'
-                  onClick={()=>{
-                    openTrailerModal(details?.TrailerUrl);
-                  }}>Trailer</Button>
-                  <Button variant="outline-info" className='details-buttons-info mr-3 ml-3'
-                  onClick={()=>{
-                    addToWatchList({id: details?.id, type:type});
-                  }}>List</Button>
-                  <Button variant="outline-info" className='details-buttons-info' onClick={()=>{
-                    redeemItem({id: details?.id, type:type});
-                  }}>Redeem</Button>
-                </div>
+                  <div className='details_desc_container'>
+                    <p className='details_desc'>
+                      {JSON.stringify(details?.description)}
+                    </p>
+                  </div>
+                  
 
-                <div className='details_desc_container'>
-                  <p className='details_desc'>
-                    {JSON.stringify(details?.description)}
-                  </p>
+                  <div className='details-rent-buy-section'>
+                    <Button variant="info" className='details-rentBuy-button' 
+                    onClick={()=>{
+                      // buyItem({id: details?.id, type:type});
+                      featureComingSoon();
+                    }}>Rent       {JSON.stringify(details?.rentPrice)}</Button>
+                    <Button variant="info" className='details-rentBuy-button' 
+                    onClick={()=>{
+                      // rentItem({id: details?.id, type:type});
+                      featureComingSoon();
+                    }}>Buy       {JSON.stringify(details?.buyPrice)}</Button>
+                  </div>
                 </div>
-                
-
-                <div className='details-rent-buy-section'>
-                  <Button variant="info" className='details-rentBuy-button' 
-                   onClick={()=>{
-                    buyItem({id: details?.id, type:type});
-                  }}>Rent       {JSON.stringify(details?.rentPrice)}</Button>
-                  <Button variant="info" className='details-rentBuy-button' 
-                   onClick={()=>{
-                    rentItem({id: details?.id, type:type});
-                  }}>Buy       {JSON.stringify(details?.buyPrice)}</Button>
-                </div>
-              </div>
+              </>}
             </div>
           </div>
           <div className='details-img-section'>
             <Image src={details?.backgroundImage} fluid className='details-img'/>
           </div>
         </div>
+
         {/* <p>{JSON.stringify(details)}</p> */}
         <Footer/>  
     </div>

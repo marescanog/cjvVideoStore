@@ -25,6 +25,8 @@ const MovieListing = ({watchType}) => {
   const [movieData, setMovieData] = useState([]);
   const [query, setQuery] = useState('');
   const [refresh, setRefresh] = useState(false);
+  const [searchTerm, setSearchTerm] = useState('');
+
   const radios = [ 
     { name: "Most Watched", value: 'mostWatched' },
     { name: "Release Date", value: 'releaseDate' },
@@ -35,6 +37,7 @@ const MovieListing = ({watchType}) => {
     setCheckValue(false);
     setRadioValue('');
     setFilterValue('');
+    setSearchTerm('');
     setQuery('');
   }
   
@@ -42,26 +45,38 @@ const MovieListing = ({watchType}) => {
     let genre = options?.genre??filterValue;
     let sort = options?.sort??radioValue;
     let free = options?.free??checkValue;
-    let hasString = (genre == '') && (sort == '') && (free == 'off') ? false : true;
+    let name = options?.name??searchTerm;
 
+    let hasString = (genre == '') && (sort == '') && (free == 'off') && (name == '') ? false : true;
     let queryString = hasString?`?`:''
     let append = "";
+
     if(options?.genre){
       append = append + ((genre == '') ? "" : `genre=${genre}`);
       append = append + ((sort == '') ? "" :  `${append==""?"":"&"}sort=${sort}`);
       append = append + ((free == 'off' || free == '') ? "" : `${append==""?"":"&"}free=${free}`);
+      append = append + ((name == '' || name == null) ? "" : `${append==""?"":"&"}name=${name}`);
     }
 
     if(options?.sort){
       append = append + ((sort == '') ? "" :  `sort=${sort}`);
       append = append + ((genre == '') ? "" : `${append==""?"":"&"}genre=${genre}`);
       append = append + ((free == 'off' || free == '') ? "" : `${append==""?"":"&"}free=${free}`);
+      append = append + ((name == '' || name == null) ? "" : `${append==""?"":"&"}name=${name}`);
     }
 
     if(options?.free){
       append = append + ((free == 'off' || free == '') ? "" : `free=${free}`);
       append = append + ((genre == '') ? "" : `${append==""?"":"&"}genre=${genre}`);
       append = append + ((sort == '') ? "" :  `${append==""?"":"&"}sort=${sort}`);
+      append = append + ((name == '' || name == null) ? "" : `${append==""?"":"&"}name=${name}`);
+    }
+
+    if(options?.name){
+      append = append + ((name == '') ? "" :  `name=${name}`);
+      append = append + ((genre == '') ? "" : `${append==""?"":"&"}genre=${genre}`);
+      append = append + ((sort == '') ? "" :  `${append==""?"":"&"}sort=${sort}`);
+      append = append + ((free == 'off' || free == '') ? "" : `${append==""?"":"&"}free=${free}`);
     }
 
     setRefresh(!refresh)
@@ -70,71 +85,109 @@ const MovieListing = ({watchType}) => {
     return queryString+append;
   }
 
-
-  useEffect(()=>{
-    let genre = '';
-    let arrQuery = [];
-    if(query != null && typeof(query) == 'string'){
-      const str = query.slice(1);
-      arrQuery = [...(str.split('&'))]
+  const handleSearchSubmit = (e) => {
+    e.preventDefault(); 
+    const newString = buildQueryString({name:searchTerm});
+    window.history.pushState({genre:filterValue, sort:radioValue, free:checkValue, name: searchTerm}, "", `/movies${newString}`);
+    try{
+      // fetch(`http://localhost:5000/movies${newString}`) // local
+      fetch(`https://videostoreapi.torontohotelcalifornia.net/movies${newString}`) // prod
+      .then(res => res.json())
+      .then(data => {
+        setMovieData(data);
+      });
+    } catch (err) {
+      console.log(err)
+      setMovieData([]);
     }
 
-    let fetchApiQuery = "?";
-    let append = "";
+  };
 
-    arrQuery.forEach(q=>{
-      const queryArr = q.split('=');
-      switch(queryArr[0]){
-        case 'sort':
-          switch(queryArr[1]){
-            case 'mostWatched':
-              append = (append=="")?(append+"_sort=rating"):(append+"&_sort=f1");
-              break;
-            case 'releaseDate':
-              append = (append=="")?(append+"_sort=releaseDate"):(append+"&_sort=f1");
-              break;
-            case 'recentlyAdded':
-              append = (append=="")?(append+"_sort=addedOn"):(append+"&_sort=f1");
-              break;
-          }
-        break;
-        case 'genre':
-          // append = (append=="")?(append+"genre_like="+queryArr[1]):(append+"genre_like="+queryArr[1]);
-          genre = queryArr[1];
-        break;
-        case 'free':
-          append = (append=="")?(append+"promoType=Free%20with%20Ads"):(append+"&promoType=Free%20with%20Ads");
-        break;
-      }
-    })
+  useEffect(()=>{
+    try{
+      // fetch(`http://localhost:5000/movies${query}`) // local
+      fetch(`https://videostoreapi.torontohotelcalifornia.net/movies${query}`) // prod
+      .then(res => res.json())
+      .then(data => {
+        setMovieData(data);
+      });
+    } catch (err) {
+      console.log(err)
+      setMovieData([]);
+    }
 
-    fetch(`https://long-plum-clam-robe.cyclic.app/movies${arrQuery.length>0?(fetchApiQuery+append):""}`)
-    // fetch(`http://localhost:8000/movies${arrQuery.length>0?(fetchApiQuery+append):""}`)
-    .then((res) => {
-      return res.json(res);
-    })
-    // .then((data)=>{
-    //   if(){
 
-    //   } else {
-    //     return data;
-    //   } 
+    // fetch(`http://localhost:5000/movies${query}`) // java local
+    // .then((res) => {
+    //   return res.json(res);
     // })
-    .then((data) => {
-      if(genre == ''){
-        return data;
-      } else {
-        // const par = JSON.parse(data);
-        return data.filter(el=>{
-          return el.genre.includes(genre)
-        });
-      }
-    })
-    .then((filteredData)=>{
-      setMovieData(filteredData);
-    })
+    // .then((data)=>{
+    //   setMovieData(data);
+    // });
 
- }, [ radioValue, filterValue, checkValue]);
+    // let genre = '';
+    // let arrQuery = [];
+    // if(query != null && typeof(query) == 'string'){
+    //   const str = query.slice(1);
+    //   arrQuery = [...(str.split('&'))]
+    // }
+
+    // let fetchApiQuery = "?";
+    // let append = "";
+
+    // arrQuery.forEach(q=>{
+    //   const queryArr = q.split('=');
+    //   switch(queryArr[0]){
+    //     case 'sort':
+    //       switch(queryArr[1]){
+    //         case 'mostWatched':
+    //           append = (append=="")?(append+"_sort=rating"):(append+"&_sort=f1");
+    //           break;
+    //         case 'releaseDate':
+    //           append = (append=="")?(append+"_sort=releaseDate"):(append+"&_sort=f1");
+    //           break;
+    //         case 'recentlyAdded':
+    //           append = (append=="")?(append+"_sort=addedOn"):(append+"&_sort=f1");
+    //           break;
+    //       }
+    //     break;
+    //     case 'genre':
+    //       // append = (append=="")?(append+"genre_like="+queryArr[1]):(append+"genre_like="+queryArr[1]);
+    //       genre = queryArr[1];
+    //     break;
+    //     case 'free':
+    //       append = (append=="")?(append+"promoType=Free%20with%20Ads"):(append+"&promoType=Free%20with%20Ads");
+    //     break;
+    //   }
+    // });
+
+    // fetch(`https://long-plum-clam-robe.cyclic.app/movies${arrQuery.length>0?(fetchApiQuery+append):""}`) // jsonserver
+    // // fetch(`http://localhost:8000/movies${arrQuery.length>0?(fetchApiQuery+append):""}`)
+    // .then((res) => {
+    //   return res.json(res);
+    // })
+    // // .then((data)=>{
+    // //   if(){
+
+    // //   } else {
+    // //     return data;
+    // //   } 
+    // // })
+    // .then((data) => {
+    //   if(genre == ''){
+    //     return data;
+    //   } else {
+    //     // const par = JSON.parse(data);
+    //     return data.filter(el=>{
+    //       return el.genre.includes(genre)
+    //     });
+    //   }
+    // })
+    // .then((filteredData)=>{
+    //   setMovieData(filteredData);
+    // })
+
+ }, [ radioValue, filterValue, checkValue ]);
 
   useEffect(()=>{
     clearAllQueryValues();
@@ -147,11 +200,28 @@ const MovieListing = ({watchType}) => {
           <Header title={'Top Picks for Your Binge-Worthy Nights'}/>
         </div>
         <div className='universal_container listing_outer_container'>
+          <Form onSubmit={handleSearchSubmit} className="search-form d-flex flex-row w-100 mb-3 " style={{ marginBottom: '1em',  alignItems:"center" }}>
+            <Form.Group controlId="formBasicSearch" style={{ margin:0, padding: 0, width: '100%'  }}>
+              <Form.Control
+                type="text"
+                placeholder="Search movies..."
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
+                style={{ height: '100%', margin:0 }}
+              />
+            </Form.Group>
+            <div className={'pl-2'}>
+              <Button variant="primary" type="submit" className={'btn-sm ml-2'}>
+                Search
+              </Button>
+            </div>
+          </Form>
+
             <div className='listing_filter_container'>
               <div className='listing_filter_container_inner'>
                 <Dropdown onSelect={(eventkey )=>{
                   setFilterValue(eventkey);
-                  window.history.pushState({genre:filterValue, sort:radioValue, free:checkValue}, "", `/movies${buildQueryString({genre:eventkey})}`);
+                  window.history.pushState({genre:filterValue, sort:radioValue, free:checkValue, name: searchTerm}, "", `/movies${buildQueryString({genre:eventkey})}`);
                 }} >
                   <Dropdown.Toggle variant="success" id="dropdown-basic" className="listing_dropdown_style">
                     {(filterValue == '' || filterValue ==null)?"Filters":filterValue}
@@ -166,8 +236,9 @@ const MovieListing = ({watchType}) => {
                   <Button variant="secondary" size="sm" className={'button_clear_filter'} active={false}
                   onClick={()=>{
                     clearAllQueryValues();
-                    window.history.pushState({genre:filterValue, sort:radioValue, free:checkValue}, "", `/movies`)
+                    window.history.pushState({genre:filterValue, sort:radioValue, free:checkValue, name: searchTerm}, "", `/movies`)
                     document.getElementById("default-checkbox").checked = false;
+                    window.location.reload();
                   }}
                   >
                     <p className='button_clear_txtStyle'>x</p>
@@ -185,7 +256,7 @@ const MovieListing = ({watchType}) => {
                   label={`Free ${watchType??'Movies'} Only`}
                   onChange={(e)=>{
                     setCheckValue(e.target.checked)
-                    window.history.pushState({genre:filterValue, sort:radioValue, free:checkValue}, "", `/movies${buildQueryString({free:e.target.checked?'on':'off'})}`);
+                    window.history.pushState({genre:filterValue, sort:radioValue, free:checkValue, name: searchTerm}, "", `/movies${buildQueryString({free:e.target.checked?'on':'off'})}`);
                   }}
                 />
               </div>
@@ -204,7 +275,7 @@ const MovieListing = ({watchType}) => {
                     checked={radioValue === radio.value}
                     onClick={()=>{
                       setRadioValue(radio.value);
-                      window.history.pushState({genre:filterValue, sort:radioValue, free:checkValue}, "", `/movies${buildQueryString({sort:radio.value})}`);
+                      window.history.pushState({genre:filterValue, sort:radioValue, free:checkValue, name: searchTerm}, "", `/movies${buildQueryString({sort:radio.value})}`);
                     }}
                   >
                     {radio.name}
