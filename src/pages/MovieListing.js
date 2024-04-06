@@ -90,8 +90,8 @@ const MovieListing = ({watchType}) => {
     const newString = buildQueryString({name:searchTerm});
     window.history.pushState({genre:filterValue, sort:radioValue, free:checkValue, name: searchTerm}, "", `/movies${newString}`);
     try{
-      // fetch(`http://localhost:5000/movies${newString}`)
-      fetch(`https://myspringbootapi-env.eba-sf9ddjd5.ca-central-1.elasticbeanstalk.com/movies${newString}`)
+      // fetch(`http://localhost:5000/movies${newString}`) // local
+      fetch(`https://videostoreapi.torontohotelcalifornia.net/movies${newString}`) // prod
       .then(res => res.json())
       .then(data => {
         setMovieData(data);
@@ -105,8 +105,8 @@ const MovieListing = ({watchType}) => {
 
   useEffect(()=>{
     try{
-      // fetch(`http://localhost:5000/movies${query}`)
-      fetch(`https://myspringbootapi-env.eba-sf9ddjd5.ca-central-1.elasticbeanstalk.com/movies${query}`)
+      // fetch(`http://localhost:5000/movies${query}`) // local
+      fetch(`https://videostoreapi.torontohotelcalifornia.net/movies${query}`) // prod
       .then(res => res.json())
       .then(data => {
         setMovieData(data);

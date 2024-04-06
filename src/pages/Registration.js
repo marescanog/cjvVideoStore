@@ -33,7 +33,7 @@ const Registration = () => {
     try{
         // fetch('http://localhost:5000/register', { // dev
 
-        fetch('https://myspringbootapi-env.eba-sf9ddjd5.ca-central-1.elasticbeanstalk.com/register', { // prod
+        fetch('https://videostoreapi.torontohotelcalifornia.net/register', { // prod
         method: 'POST',
         headers: {
           'Accept': 'application/json',
@@ -47,6 +47,7 @@ const Registration = () => {
           confirmPassword:  inputs.confirmPassword,
         })
       }).then(res => {
+        console.log(res)
         if (res.status == 200) {
           return res.json(); 
         }

@@ -91,7 +91,7 @@ const TVListing = ({watchType}) => {
     window.history.pushState({genre:filterValue, sort:radioValue, free:checkValue, name: searchTerm}, "", `/movies${newString}`);
     try{
       // fetch(`http://localhost:5000/tv${query}`) // java local
-      fetch(`https://myspringbootapi-env.eba-sf9ddjd5.ca-central-1.elasticbeanstalk.com/tv${newString}`)
+      fetch(`https://videostoreapi.torontohotelcalifornia.net/tv${newString}`) // prod
       .then(res => res.json())
       .then(data => {
         setTvShowData(data);
@@ -105,7 +105,7 @@ const TVListing = ({watchType}) => {
   useEffect(()=>{
     try{
       // fetch(`http://localhost:5000/tv${query}`) // java local
-      fetch(`https://myspringbootapi-env.eba-sf9ddjd5.ca-central-1.elasticbeanstalk.com/tv${query}`)
+      fetch(`https://videostoreapi.torontohotelcalifornia.net/tv${query}`) // prod
       .then((res) => {
         return res.json(res);
       })

@@ -20,7 +20,7 @@ const Home = () => {
 
     try{
       // fetch('http://localhost:5000/mostDemanded?releaseYear=2021') // Java Server local
-      fetch('https://myspringbootapi-env.eba-sf9ddjd5.ca-central-1.elasticbeanstalk.com/mostDemanded?releaseYear=2021') // Java Server deployed
+      fetch('https://videostoreapi.torontohotelcalifornia.net/mostDemanded?releaseYear=2021') // Java Server deployed
       .then((res) => {
         return res.json();
       })
@@ -38,8 +38,8 @@ const Home = () => {
     // fetch('http://localhost:8000/movies?IsFeatured=true')
     try{
       console.log(process.env);
-      // fetch(`http://localhost:5000/mostDemanded?releaseYear=2021`) // Java Server local
-      fetch('https://myspringbootapi-env.eba-sf9ddjd5.ca-central-1.elasticbeanstalk.com/movies?IsFeatured=true') // Java Server prod
+      // fetch(`http://localhost:5000/movies?IsFeatured=true`) // Java Server local
+      fetch('https://videostoreapi.torontohotelcalifornia.net/movies?IsFeatured=true') // Java Server prod
       .then((res) => {
         return res.json();
       })
@@ -57,7 +57,7 @@ const Home = () => {
 
     try{
       // fetch('http://localhost:5000/shows?IsFeatured=true') // Java Server local
-      fetch('https://myspringbootapi-env.eba-sf9ddjd5.ca-central-1.elasticbeanstalk.com/shows?IsFeatured=true') // Java Server prod
+      fetch('https://videostoreapi.torontohotelcalifornia.net/shows?IsFeatured=true') // Java Server prod
       .then((res) => {
         return res.json();
       })

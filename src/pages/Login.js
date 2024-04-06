@@ -51,8 +51,8 @@ const Login = () => {
         // fetch(`https://long-plum-clam-robe.cyclic.app/users?email=${inputs.email}`)
         // fetch(`http://localhost:8000/users?email=${inputs.email}`)
 
-        fetch(`http://localhost:5000/user`,
-        // fetch(`https://myspringbootapi-env.eba-sf9ddjd5.ca-central-1.elasticbeanstalk.com/user`, // prod
+        // fetch(`http://localhost:5000/user`, // local
+        fetch(`https://videostoreapi.torontohotelcalifornia.net/user`, // prod
         requestOptions
         )
           .then(res => {
@@ -69,7 +69,7 @@ const Login = () => {
             let xsrf = Cookies.get('XSRF-TOKEN');
             setXSRF(xsrf);
             setUser(res)
-            
+
             Swal.fire({
               icon: "success",
               title: "Success",
@@ -77,7 +77,7 @@ const Login = () => {
               allowOutsideClick: false
             }).then((result) => {
               if (result.isConfirmed) {
-                window.location.replace("http://localhost:3000/account");
+                window.location.replace("/account");
               }
             });
           })
