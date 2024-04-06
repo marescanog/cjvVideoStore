@@ -124,12 +124,15 @@
         font-size: 1em;
     }
 
-    .listingContainer{
+
+    .listingContainer {
         display: grid;
-        grid-template-columns: auto auto auto auto auto auto auto;
+        grid-template-columns: repeat(7, 1fr); 
+        gap: 5px; 
         margin-top: 1.5em;
     }
 
+    
     .featured_card_style_2{
         min-width: 5em;
         min-height: 15em;
