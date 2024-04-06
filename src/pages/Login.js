@@ -83,9 +83,21 @@ const Login = () => {
           })
           .catch(err=>{
             console.log(err)
+            Swal.fire({
+              icon: "error",
+              title: "Login not successful!",
+              text: "Please check your username & password",
+              allowOutsideClick: false
+            })
           })
         } catch (err){
           console.log(err)
+          Swal.fire({
+            icon: "error",
+            title: "Login not successful!",
+            text: "Please check your username & password",
+            allowOutsideClick: false
+          })
         }
             
 
